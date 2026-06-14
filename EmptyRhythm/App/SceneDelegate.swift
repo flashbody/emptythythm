@@ -13,13 +13,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
 
-        let authManager = AuthManager.shared
-        if authManager.isLoggedIn {
-            window.rootViewController = MainTabBarController()
-        } else {
-            window.rootViewController = UINavigationController(rootViewController: OnboardingViewController())
-        }
+        // 先显示启动页
+        let launchVC = LaunchViewController()
+        window.rootViewController = launchVC
         window.makeKeyAndVisible()
+
+        // 2.2秒后过渡到主界面
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+            let mainVC: UIViewController
+            if AuthManager.shared.isLoggedIn {
+                mainVC = MainTabBarController()
+            } else {
+                mainVC = UINavigationController(rootViewController: OnboardingViewController())
+            }
+            UIView.transition(with: window, duration: 0.5,
+                              options: .transitionCrossDissolve) {
+                window.rootViewController = mainVC
+            }
+        }
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {

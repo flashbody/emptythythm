@@ -34,6 +34,7 @@ targets:
           - "**/*.md"
           - "Widget/**"
           - "Tests/**"
+          - "App/LaunchScreen.storyboard"
     resources:
       - path: EmptyRhythm/Resources
     info:
@@ -43,7 +44,8 @@ targets:
         CFBundleDisplayName: "空律"
         CFBundleShortVersionString: "$(MARKETING_VERSION)"
         CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
-        UILaunchStoryboardName: LaunchScreen
+        UILaunchScreen:
+          UIBackgroundColor: "0x155A4A"
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
         UIApplicationSceneManifest:

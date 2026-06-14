@@ -17,6 +17,7 @@
 		24063DEBED951DF1B6EEAFF6 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB920C59BD398B809695C33 /* AppColor.swift */; };
 		25C236C5803290F09A8E9D0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D85F02C3776ACCBFAA3CF /* SceneDelegate.swift */; };
 		2B10B0749349520AFEBFF5FC /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5086EE8C92A90B04261D4D /* UserNotifications.framework */; };
+		310D796BC15B1EE8226D2846 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444E70BA16B0D68FB39BBB6 /* LaunchViewController.swift */; };
 		35214CC4023CF6B91B34BDA3 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B125E3D7F60B6B3CDBDD7F /* TimerViewController.swift */; };
 		38E1A3A3DD01CF0BC1DAD892 /* AIFastPlanEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D062205684755CA373396 /* AIFastPlanEngine.swift */; };
 		397F3F83042317F9F6F2B170 /* AIAssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A73F086545EBEF3865DD86 /* AIAssistantViewController.swift */; };
@@ -87,6 +88,7 @@
 		5AF84BC9D3A18E3B896DF6A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5DD1BA12726C3B1AA1993D75 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		6866A01FC45F41473A9706ED /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		7444E70BA16B0D68FB39BBB6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		788D062205684755CA373396 /* AIFastPlanEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFastPlanEngine.swift; sourceTree = "<group>"; };
 		7A00D8BB8A2AFE548591C65A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		7B5457C0B5BE44C8CD61563F /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
@@ -296,6 +298,7 @@
 				4624E8C91A3C25366137637C /* AppDelegate.swift */,
 				BACB67866685728A1BF8A6B2 /* EmptyRhythm.entitlements */,
 				18CEF8B439678FAEEE7DEFF5 /* Info.plist */,
+				7444E70BA16B0D68FB39BBB6 /* LaunchViewController.swift */,
 				103F8A2101ABC2C93249F737 /* MainTabBarController.swift */,
 				E81D85F02C3776ACCBFAA3CF /* SceneDelegate.swift */,
 			);
@@ -481,6 +484,7 @@
 				B252D711ED856AC977910C18 /* FoodSearchViewController.swift in Sources */,
 				77E6CB36F09723AB3C87346D /* HealthKitService.swift in Sources */,
 				39AB0F794E94FE5E5B269AA3 /* IAPManager.swift in Sources */,
+				310D796BC15B1EE8226D2846 /* LaunchViewController.swift in Sources */,
 				586EFB87D2C2D876898808CA /* MainTabBarController.swift in Sources */,
 				4B18CE02E40DB94B6CC1CBF2 /* NotificationManager.swift in Sources */,
 				65488B54EF668D39A44E05CF /* OnboardingViewController.swift in Sources */,
