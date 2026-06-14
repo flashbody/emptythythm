@@ -1,0 +1,111 @@
+name: EmptyRhythm
+options:
+  bundleIdPrefix: com.emptythythm
+  deploymentTarget:
+    iOS: "18.1"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    PRODUCT_BUNDLE_IDENTIFIER: com.emptythythm.app
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.10"
+    TARGETED_DEVICE_FAMILY: "1"
+    IPHONEOS_DEPLOYMENT_TARGET: "18.1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_BITCODE: NO
+    SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+    DEBUG_INFORMATION_FORMAT: dwarf
+  configs:
+    Release:
+      SWIFT_OPTIMIZATION_LEVEL: "-O"
+      DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+
+targets:
+  EmptyRhythm:
+    type: application
+    platform: iOS
+    sources:
+      - path: EmptyRhythm
+        excludes:
+          - "**/*.md"
+          - "Widget/**"
+          - "Tests/**"
+    resources:
+      - path: EmptyRhythm/Resources
+    info:
+      path: EmptyRhythm/App/Info.plist
+      properties:
+        CFBundleName: "空律"
+        CFBundleDisplayName: "空律"
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        UILaunchStoryboardName: LaunchScreen
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations:
+            UIWindowSceneSessionRoleApplication:
+              - UISceneConfigurationName: Default Configuration
+                UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+        NSHealthShareUsageDescription: "空律需要读取您的运动和健康数据，以提供个性化的断食方案和运动预警。"
+        NSHealthUpdateUsageDescription: "空律需要写入断食记录到健康App，方便您统一查看健康数据。"
+        NSCameraUsageDescription: "空律需要访问相机，用于拍照识别食物热量。"
+        NSPhotoLibraryUsageDescription: "空律需要访问相册，用于从图片识别食物热量。"
+        UIBackgroundModes:
+          - fetch
+          - remote-notification
+        NSUbiquitousContainers:
+          iCloud.com.emptythythm.app:
+            NSUbiquitousContainerIsDocumentScopePublic: true
+            NSUbiquitousContainerName: EmptyRhythm
+            NSUbiquitousContainerSupportedFolderLevels: Any
+    entitlements:
+      path: EmptyRhythm/App/EmptyRhythm.entitlements
+      properties:
+        com.apple.developer.icloud-container-identifiers:
+          - iCloud.com.emptythythm.app
+        com.apple.developer.ubiquity-kvstore-identifier: $(TeamIdentifierPrefix)com.emptythythm.app
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.access:
+          - health-records
+    dependencies:
+      - sdk: HealthKit.framework
+      - sdk: AuthenticationServices.framework
+      - sdk: UserNotifications.framework
+      - sdk: CoreData.framework
+      - sdk: Vision.framework
+      - sdk: WidgetKit.framework
+
+  EmptyRhythmWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: EmptyRhythm/Widget
+    info:
+      path: EmptyRhythm/Widget/Info.plist
+      properties:
+        CFBundleName: EmptyRhythmWidget
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.emptythythm.app.widget
+    dependencies:
+      - target: EmptyRhythm
+
+  EmptyRhythmTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: EmptyRhythm/Tests
+    dependencies:
+      - target: EmptyRhythm
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.emptythythm.app.tests
+        GENERATE_INFOPLIST_FILE: YES

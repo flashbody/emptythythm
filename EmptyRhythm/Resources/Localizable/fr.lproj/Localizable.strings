@@ -1,0 +1,144 @@
+/* Tabs */
+"tab.timer" = "Minuteur";
+"tab.stats" = "Statistiques";
+"tab.record" = "Journal";
+"tab.ai" = "IA";
+"tab.settings" = "Réglages";
+
+/* Onboarding */
+"onboarding.title" = "EmptyRhythm";
+"onboarding.subtitle" = "Suivi intelligent du jeûne intermittent avec personnalisation IA";
+"onboarding.signin" = "Se connecter avec Apple";
+"onboarding.disclaimer" = "Le contenu IA est indicatif. Consultez votre médecin avant tout jeûne.";
+"onboarding.feature.timer" = "Minuteur de jeûne précis";
+"onboarding.feature.food" = "Base de données 5000+ aliments";
+"onboarding.feature.weight" = "Suivi du poids & prédictions";
+"onboarding.feature.ai" = "Plans de jeûne personnalisés par IA";
+"onboarding.feature.health" = "Intégration Apple Santé";
+
+/* Timer */
+"timer.start" = "Commencer le jeûne";
+"timer.stop" = "Arrêter";
+"timer.restart" = "Recommencer";
+"timer.start_again" = "Nouveau jeûne";
+"timer.elapsed" = "Écoulé";
+"timer.remaining" = "Restant";
+"timer.today_stats" = "Aujourd'hui";
+"timer.no_plan" = "Choisir un plan";
+"timer.status.idle" = "Prêt à jeûner";
+"timer.status.fasting" = "Jeûne en cours";
+"timer.status.eating" = "Fenêtre alimentaire";
+"timer.status.completed" = "Terminé !";
+"timer.status.interrupted" = "Interrompu";
+"timer.completed_today" = "Bravo pour aujourd'hui !";
+"timer.stop.title" = "Terminer le jeûne";
+"timer.stop.message" = "Comment souhaitez-vous terminer votre jeûne ?";
+"timer.stop.complete" = "Terminer";
+"timer.stop.interrupt" = "Interrompre";
+
+/* Plans */
+"plan.select.title" = "Choisir un plan";
+"plan.ai_recommend" = "Recommandé par IA";
+"plan.preset_plans" = "Plans prédéfinis";
+"plan.12_12" = "12:12 Débutant";
+"plan.14_10" = "14:10 Doux";
+"plan.16_8" = "16:8 Classique";
+"plan.18_6" = "18:6 Avancé";
+"plan.20_4" = "20:4 Intensif";
+"plan.5_2" = "5:2 Hebdomadaire";
+"plan.12_12.desc" = "Parfait pour les débutants. 12h de jeûne, 12h de fenêtre.";
+"plan.14_10.desc" = "Début en douceur. 14h de jeûne, 10h de fenêtre.";
+"plan.16_8.desc" = "Le plus populaire. 16h de jeûne, 8h de fenêtre.";
+"plan.18_6.desc" = "Combustion des graisses avancée. 18h de jeûne, 6h de fenêtre.";
+"plan.20_4.desc" = "Intensif. 20h de jeûne, 4h de fenêtre. Hommes uniquement.";
+"plan.5_2.desc" = "Jeûner 2 jours par semaine, manger normalement 5 jours.";
+"plan.ai.wellness" = "Plan Bien-être";
+"plan.ai.wellness.desc" = "Jeûne doux pour la santé intestinale et le bien-être.";
+"plan.ai.gentle" = "Plan Doux";
+"plan.ai.gentle.desc" = "Adapté aux constitutions sensibles.";
+"plan.ai.normal.desc" = "Maintenir un poids sain avec le classique 16:8.";
+"plan.ai.overweight.desc" = "Perte de graisse progressive avec jeûne prolongé.";
+"plan.ai.beginner.desc" = "Commencer doucement, construire l'habitude progressivement.";
+"plan.ai.obese.desc" = "Approche structurée pour une perte de poids significative.";
+
+/* BMI */
+"bmi.underweight" = "Insuffisance pondérale";
+"bmi.normal" = "Poids normal";
+"bmi.overweight" = "Surpoids";
+"bmi.obese" = "Obésité";
+
+/* Gender */
+"gender.female" = "Féminin";
+"gender.male" = "Masculin";
+
+/* Sport */
+"sport.sedentary" = "Sédentaire";
+"sport.light" = "Activité légère";
+"sport.moderate" = "Modéré";
+"sport.intense" = "Intense";
+
+/* Work Rest */
+"workrest.regular" = "Horaires réguliers";
+"workrest.nightowl" = "Couche-tard";
+
+/* Stats */
+"stats.streak" = "Jours consécutifs";
+"stats.completed" = "Complétés";
+"stats.weight" = "Poids (kg)";
+
+/* Notifications */
+"notification.fast_start.title" = "C'est l'heure de jeûner !";
+"notification.fast_start.body" = "Votre période de jeûne a commencé. Tenez bon !";
+"notification.eat_window.title" = "Fenêtre alimentaire ouverte";
+"notification.eat_window.body" = "Vous pouvez manger maintenant. Choisissez bien !";
+"notification.eat_close_warning.title" = "Plus que 30 minutes";
+"notification.eat_close_warning.body" = "Votre fenêtre alimentaire se ferme dans 30 minutes.";
+"notification.daily_progress.title" = "Bilan quotidien";
+"notification.daily_progress.body" = "Comment s'est passée votre journée ? Notez vos progrès !";
+
+/* Health */
+"health.warning.sedentary" = "Vous êtes assis depuis trop longtemps. Bougez !";
+"health.warning.heart_rate" = "Votre fréquence cardiaque au repos semble élevée. Reposez-vous.";
+"health.warning.low_activity" = "Peu d'activité aujourd'hui. Une courte marche aide le métabolisme.";
+
+/* Food Categories */
+"food.category.protein" = "Protéines";
+"food.category.grain" = "Céréales";
+"food.category.vegetable" = "Légumes";
+"food.category.fruit" = "Fruits";
+"food.category.dairy" = "Produits laitiers";
+"food.category.nuts" = "Noix";
+"food.category.beverage" = "Boissons";
+"food.category.snack" = "Snacks";
+"food.category.processed_meat" = "Viande transformée";
+"food.category.red_meat" = "Viande rouge";
+"food.category.seafood" = "Fruits de mer";
+"food.category.egg" = "Œufs";
+"food.category.oil" = "Huiles";
+"food.category.condiment" = "Condiments";
+"food.category.fast_food" = "Fast Food";
+"food.category.dessert" = "Desserts";
+"food.gi.very_low" = "IG très bas";
+"food.gi.low" = "IG bas";
+"food.gi.medium" = "IG moyen";
+"food.gi.high" = "IG élevé";
+
+/* Reports */
+"report.excellent_execution" = "Excellente semaine ! Vous avez maintenu une discipline de jeûne solide.";
+"report.good_execution" = "Bons progrès cette semaine. Continuez à construire l'habitude.";
+"report.need_improvement" = "Semaine difficile. Analysons ce qui s'est passé.";
+"report.weight_down" = "Vous avez perdu %.1f kg cette semaine. Excellent progrès !";
+"report.weight_up" = "Poids augmenté de %.1f kg. Révisez votre fenêtre alimentaire.";
+"report.weight_stable" = "Le poids est stable. La constance est la clé.";
+"report.next_week_tip" = "Semaine prochaine : Concentrez-vous sur l'hydratation pendant le jeûne.";
+
+/* Common */
+"common.cancel" = "Annuler";
+"common.ok" = "OK";
+"common.save" = "Enregistrer";
+"common.error" = "Erreur";
+"common.done" = "Terminé";
+"common.next" = "Suivant";
+"common.back" = "Retour";
+"common.delete" = "Supprimer";
+"common.edit" = "Modifier";

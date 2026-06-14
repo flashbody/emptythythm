@@ -1,0 +1,144 @@
+/* Tabs */
+"tab.timer" = "Timer";
+"tab.stats" = "Statistiken";
+"tab.record" = "Tagebuch";
+"tab.ai" = "KI";
+"tab.settings" = "Einstellungen";
+
+/* Onboarding */
+"onboarding.title" = "EmptyRhythm";
+"onboarding.subtitle" = "Intelligenter Intervallfasten-Tracker mit KI-Personalisierung";
+"onboarding.signin" = "Mit Apple anmelden";
+"onboarding.disclaimer" = "KI-Inhalte dienen nur als Referenz. Konsultieren Sie Ihren Arzt vor dem Fasten.";
+"onboarding.feature.timer" = "Präziser Fasten-Timer";
+"onboarding.feature.food" = "5000+ Lebensmittel-Datenbank";
+"onboarding.feature.weight" = "Gewichtsverfolgung & Prognosen";
+"onboarding.feature.ai" = "KI-personalisierte Fastenpläne";
+"onboarding.feature.health" = "Apple Health Integration";
+
+/* Timer */
+"timer.start" = "Fasten starten";
+"timer.stop" = "Stopp";
+"timer.restart" = "Neu starten";
+"timer.start_again" = "Neues Fasten";
+"timer.elapsed" = "Vergangen";
+"timer.remaining" = "Verbleibend";
+"timer.today_stats" = "Heute";
+"timer.no_plan" = "Plan auswählen";
+"timer.status.idle" = "Bereit zum Fasten";
+"timer.status.fasting" = "Fastenzeit";
+"timer.status.eating" = "Essensfenster";
+"timer.status.completed" = "Geschafft!";
+"timer.status.interrupted" = "Unterbrochen";
+"timer.completed_today" = "Tolle Leistung heute!";
+"timer.stop.title" = "Fasten beenden";
+"timer.stop.message" = "Wie möchten Sie das Fasten beenden?";
+"timer.stop.complete" = "Abschließen";
+"timer.stop.interrupt" = "Unterbrechen";
+
+/* Plans */
+"plan.select.title" = "Plan auswählen";
+"plan.ai_recommend" = "KI-Empfehlung";
+"plan.preset_plans" = "Voreingestellte Pläne";
+"plan.12_12" = "12:12 Einsteiger";
+"plan.14_10" = "14:10 Sanft";
+"plan.16_8" = "16:8 Klassisch";
+"plan.18_6" = "18:6 Fortgeschritten";
+"plan.20_4" = "20:4 Intensiv";
+"plan.5_2" = "5:2 Wöchentlich";
+"plan.12_12.desc" = "Perfekt für Einsteiger. 12h fasten, 12h Essensfenster.";
+"plan.14_10.desc" = "Sanfter Einstieg. 14h fasten, 10h Essensfenster.";
+"plan.16_8.desc" = "Beliebteste Methode. 16h fasten, 8h Essensfenster.";
+"plan.18_6.desc" = "Intensivere Fettverbrennung. 18h fasten, 6h Essensfenster.";
+"plan.20_4.desc" = "Intensiv. 20h fasten, 4h Essensfenster. Nur für Männer.";
+"plan.5_2.desc" = "2 Tage pro Woche fasten, 5 Tage normal essen.";
+"plan.ai.wellness" = "Wellness-Plan";
+"plan.ai.wellness.desc" = "Sanftes Fasten für Darmgesundheit und Wohlbefinden.";
+"plan.ai.gentle" = "Sanfter Plan";
+"plan.ai.gentle.desc" = "Angepasst für empfindliche Konstitution.";
+"plan.ai.normal.desc" = "Gesundes Gewicht mit klassischem 16:8 halten.";
+"plan.ai.overweight.desc" = "Schrittweiser Fettabbau mit verlängertem Fasten.";
+"plan.ai.beginner.desc" = "Langsam starten, Gewohnheit aufbauen.";
+"plan.ai.obese.desc" = "Strukturierter Ansatz für signifikanten Gewichtsverlust.";
+
+/* BMI */
+"bmi.underweight" = "Untergewicht";
+"bmi.normal" = "Normalgewicht";
+"bmi.overweight" = "Übergewicht";
+"bmi.obese" = "Adipositas";
+
+/* Gender */
+"gender.female" = "Weiblich";
+"gender.male" = "Männlich";
+
+/* Sport */
+"sport.sedentary" = "Sitzend";
+"sport.light" = "Leichte Aktivität";
+"sport.moderate" = "Moderat";
+"sport.intense" = "Intensiv";
+
+/* Work Rest */
+"workrest.regular" = "Regelmäßiger Rhythmus";
+"workrest.nightowl" = "Nachtmensch";
+
+/* Stats */
+"stats.streak" = "Tage in Folge";
+"stats.completed" = "Abgeschlossen";
+"stats.weight" = "Gewicht (kg)";
+
+/* Notifications */
+"notification.fast_start.title" = "Fastenzeit beginnt!";
+"notification.fast_start.body" = "Ihr Fastenfenster hat begonnen. Bleiben Sie stark!";
+"notification.eat_window.title" = "Essensfenster offen";
+"notification.eat_window.body" = "Sie können jetzt essen. Wählen Sie weise!";
+"notification.eat_close_warning.title" = "Noch 30 Minuten";
+"notification.eat_close_warning.body" = "Ihr Essensfenster schließt in 30 Minuten.";
+"notification.daily_progress.title" = "Täglicher Check-in";
+"notification.daily_progress.body" = "Wie war Ihr Tag? Tragen Sie Ihren Fortschritt ein!";
+
+/* Health */
+"health.warning.sedentary" = "Sie sitzen zu lange. Zeit, sich zu bewegen!";
+"health.warning.heart_rate" = "Ihre Ruheherzfrequenz scheint erhöht. Ruhen Sie sich aus.";
+"health.warning.low_activity" = "Wenig Aktivität heute. Ein kurzer Spaziergang hilft dem Stoffwechsel.";
+
+/* Food Categories */
+"food.category.protein" = "Protein";
+"food.category.grain" = "Getreide";
+"food.category.vegetable" = "Gemüse";
+"food.category.fruit" = "Obst";
+"food.category.dairy" = "Milchprodukte";
+"food.category.nuts" = "Nüsse";
+"food.category.beverage" = "Getränke";
+"food.category.snack" = "Snacks";
+"food.category.processed_meat" = "Verarbeitetes Fleisch";
+"food.category.red_meat" = "Rotes Fleisch";
+"food.category.seafood" = "Meeresfrüchte";
+"food.category.egg" = "Eier";
+"food.category.oil" = "Öle";
+"food.category.condiment" = "Gewürze";
+"food.category.fast_food" = "Fast Food";
+"food.category.dessert" = "Desserts";
+"food.gi.very_low" = "Sehr niedriger GI";
+"food.gi.low" = "Niedriger GI";
+"food.gi.medium" = "Mittlerer GI";
+"food.gi.high" = "Hoher GI";
+
+/* Reports */
+"report.excellent_execution" = "Ausgezeichnete Woche! Sie haben konsequent gefastet.";
+"report.good_execution" = "Guter Fortschritt diese Woche. Weiter so!";
+"report.need_improvement" = "Herausfordernde Woche. Lassen Sie uns analysieren.";
+"report.weight_down" = "Sie haben %.1f kg abgenommen. Toller Fortschritt!";
+"report.weight_up" = "Gewicht um %.1f kg gestiegen. Überprüfen Sie Ihr Essensfenster.";
+"report.weight_stable" = "Gewicht ist stabil. Konsequenz ist der Schlüssel.";
+"report.next_week_tip" = "Nächste Woche: Achten Sie auf ausreichend Hydration beim Fasten.";
+
+/* Common */
+"common.cancel" = "Abbrechen";
+"common.ok" = "OK";
+"common.save" = "Speichern";
+"common.error" = "Fehler";
+"common.done" = "Fertig";
+"common.next" = "Weiter";
+"common.back" = "Zurück";
+"common.delete" = "Löschen";
+"common.edit" = "Bearbeiten";

@@ -1,0 +1,273 @@
+/* Tabs */
+"tab.timer" = "Timer";
+"tab.stats" = "Stats";
+"tab.record" = "Record";
+"tab.ai" = "AI";
+"tab.settings" = "Settings";
+
+/* Onboarding */
+"onboarding.title" = "EmptyRhythm";
+"onboarding.subtitle" = "Smart intermittent fasting tracker with AI-powered personalization";
+"onboarding.signin" = "Sign in with Apple";
+"onboarding.disclaimer" = "AI content is for reference only. Consult your doctor before starting any fasting program.";
+"onboarding.feature.timer" = "Precision fasting timer";
+"onboarding.feature.food" = "5000+ food calorie database";
+"onboarding.feature.weight" = "Weight tracking & predictions";
+"onboarding.feature.ai" = "AI personalized fasting plans";
+"onboarding.feature.health" = "Apple Health integration";
+
+/* Timer */
+"timer.start" = "Start Fasting";
+"timer.stop" = "Stop";
+"timer.restart" = "Start Again";
+"timer.start_again" = "New Fast";
+"timer.elapsed" = "Elapsed";
+"timer.remaining" = "Remaining";
+"timer.today_stats" = "Today";
+"timer.no_plan" = "Select a plan";
+"timer.status.idle" = "Ready to fast";
+"timer.status.fasting" = "Fasting";
+"timer.status.eating" = "Eating Window";
+"timer.status.completed" = "Completed!";
+"timer.status.interrupted" = "Interrupted";
+"timer.completed_today" = "Great job today!";
+"timer.stop.title" = "End Fast";
+"timer.stop.message" = "How would you like to end your fast?";
+"timer.stop.complete" = "Complete";
+"timer.stop.interrupt" = "Interrupt";
+
+/* Plans */
+"plan.select.title" = "Choose a Plan";
+"plan.ai_recommend" = "AI Recommended";
+"plan.preset_plans" = "Preset Plans";
+"plan.12_12" = "12:12 Beginner";
+"plan.14_10" = "14:10 Gentle";
+"plan.16_8" = "16:8 Classic";
+"plan.18_6" = "18:6 Advanced";
+"plan.20_4" = "20:4 Warrior";
+"plan.5_2" = "5:2 Weekly";
+"plan.12_12.desc" = "Perfect for beginners. 12h fast, 12h eating window.";
+"plan.14_10.desc" = "Gentle start. 14h fast, 10h eating window.";
+"plan.16_8.desc" = "Most popular. 16h fast, 8h eating window.";
+"plan.18_6.desc" = "Advanced fat burning. 18h fast, 6h eating window.";
+"plan.20_4.desc" = "Intense. 20h fast, 4h eating window. Male only.";
+"plan.5_2.desc" = "Fast 2 days per week, eat normally 5 days.";
+"plan.ai.wellness" = "Wellness Plan";
+"plan.ai.wellness.desc" = "Gentle fasting for gut health and wellbeing.";
+"plan.ai.gentle" = "Gentle Plan";
+"plan.ai.gentle.desc" = "Tailored for sensitive constitution.";
+"plan.ai.normal.desc" = "Maintain healthy weight with classic 16:8.";
+"plan.ai.overweight.desc" = "Progressive fat loss with extended fasting.";
+"plan.ai.beginner.desc" = "Start slow, build the habit gradually.";
+"plan.ai.obese.desc" = "Structured approach for significant weight loss.";
+
+/* BMI */
+"bmi.underweight" = "Underweight";
+"bmi.normal" = "Normal";
+"bmi.overweight" = "Overweight";
+"bmi.obese" = "Obese";
+
+/* Gender */
+"gender.female" = "Female";
+"gender.male" = "Male";
+
+/* Sport */
+"sport.sedentary" = "Sedentary";
+"sport.light" = "Light Activity";
+"sport.moderate" = "Moderate";
+"sport.intense" = "Intense";
+
+/* Work Rest */
+"workrest.regular" = "Regular Schedule";
+"workrest.nightowl" = "Night Owl";
+
+/* Stats */
+"stats.streak" = "Day Streak";
+"stats.completed" = "Completed";
+"stats.weight" = "Weight (kg)";
+
+/* Notifications */
+"notification.fast_start.title" = "Time to Fast!";
+"notification.fast_start.body" = "Your fasting window has started. Stay strong!";
+"notification.eat_window.title" = "Eating Window Open";
+"notification.eat_window.body" = "You can eat now. Choose wisely!";
+"notification.eat_close_warning.title" = "30 Minutes Left";
+"notification.eat_close_warning.body" = "Your eating window closes in 30 minutes.";
+"notification.daily_progress.title" = "Daily Check-in";
+"notification.daily_progress.body" = "How did today go? Log your progress!";
+
+/* Health */
+"health.warning.sedentary" = "You've been sitting too long. Time to move!";
+"health.warning.heart_rate" = "Your resting heart rate seems elevated. Rest and hydrate.";
+"health.warning.low_activity" = "Low activity today. A short walk can help your metabolism.";
+
+/* Food Categories */
+"food.category.protein" = "Protein";
+"food.category.grain" = "Grains";
+"food.category.vegetable" = "Vegetables";
+"food.category.fruit" = "Fruits";
+"food.category.dairy" = "Dairy";
+"food.category.nuts" = "Nuts";
+"food.category.beverage" = "Beverages";
+"food.category.snack" = "Snacks";
+"food.category.processed_meat" = "Processed Meat";
+"food.category.red_meat" = "Red Meat";
+"food.category.seafood" = "Seafood";
+"food.category.egg" = "Eggs";
+"food.category.oil" = "Oils";
+"food.category.condiment" = "Condiments";
+"food.category.fast_food" = "Fast Food";
+"food.category.dessert" = "Desserts";
+"food.gi.very_low" = "Very Low GI";
+"food.gi.low" = "Low GI";
+"food.gi.medium" = "Medium GI";
+"food.gi.high" = "High GI";
+
+/* Reports */
+"report.excellent_execution" = "Excellent week! You maintained strong fasting discipline.";
+"report.good_execution" = "Good progress this week. Keep building the habit.";
+"report.need_improvement" = "Challenging week. Let's analyze what happened.";
+"report.weight_down" = "You lost %.1f kg this week. Great progress!";
+"report.weight_up" = "Weight increased by %.1f kg. Review your eating window.";
+"report.weight_stable" = "Weight is stable. Consistency is key.";
+"report.next_week_tip" = "Next week: Focus on staying hydrated during fasting hours.";
+
+/* Common */
+"common.cancel" = "Cancel";
+"common.ok" = "OK";
+"common.save" = "Save";
+"common.error" = "Error";
+"common.done" = "Done";
+"common.next" = "Next";
+"common.back" = "Back";
+"common.delete" = "Delete";
+"common.edit" = "Edit";
+
+/* Record */
+"record.today" = "Today";
+"record.yesterday" = "Yesterday";
+"record.remaining_cal" = "%d kcal remaining";
+"record.over_cal" = "%d kcal over limit";
+"meal.breakfast" = "Breakfast";
+"meal.lunch" = "Lunch";
+"meal.dinner" = "Dinner";
+"meal.snack" = "Snack";
+"meal.drink" = "Drink";
+"meal.late_night" = "Late Night";
+
+/* Food Search */
+"food.search.title" = "Add Food";
+"food.search.placeholder" = "Search food...";
+"food.all" = "All";
+"food.enter_weight" = "Enter amount (grams)";
+"common.add" = "Add";
+
+/* Camera */
+"camera.title" = "Photo Recognition";
+"camera.take_photo" = "Take Photo / Choose from Library";
+"camera.analyze" = "Analyze Food";
+"camera.candidates" = "Select the correct food:";
+"camera.disclaimer" = "AI recognition is for reference only. Accuracy ~60-70%. Please confirm before adding.";
+"camera.unavailable.title" = "Camera Unavailable";
+"camera.unavailable.message" = "Camera access is not available. You can still search for food manually.";
+
+/* Stats */
+"stats.log_weight" = "Log Weight";
+"stats.no_weight_data" = "No weight data yet";
+"stats.no_chart_data" = "Log your weight to see the chart";
+"stats.prediction_title" = "Goal Prediction";
+"stats.prediction_no_data" = "Log your weight and set a target to see predictions.";
+"stats.prediction_reached" = "Congratulations! You've reached your target weight!";
+"stats.prediction_text" = "You need to lose %.1f kg. Estimated %d weeks to reach your goal by %@. Daily calorie deficit: %d kcal.";
+"stats.weekly_report" = "Weekly AI Report";
+"stats.success_rate" = "Success Rate";
+"stats.avg_fast" = "Avg Fast";
+
+/* AI */
+"ai.disclaimer" = "AI content is for reference only. Not medical advice. Consult your doctor for health concerns.";
+"ai.welcome" = "Hi! I'm your fasting assistant. Ask me anything about intermittent fasting, nutrition, or your health goals.";
+"ai.input.placeholder" = "Ask me anything...";
+"quick.q1" = "What can I drink while fasting?";
+"quick.q2" = "I feel dizzy, what should I do?";
+"quick.q3" = "What's the best plan for me?";
+"quick.q4" = "How many calories should I eat?";
+"quick.q5" = "Tips for beginners";
+"quick.q6" = "Can I exercise while fasting?";
+"ai.response.drinks" = "During fasting, you can drink: water, black coffee (no sugar/milk), plain tea, sparkling water. Avoid: juice, milk, soda, or anything with calories that breaks your fast.";
+"ai.response.dizzy" = "Dizziness during fasting is common, especially in the first week. Try: drink more water, add a pinch of salt, take electrolytes, or break your fast if symptoms persist. If severe, please consult a doctor.";
+"ai.response.hunger" = "Hunger during fasting is normal. Tips: drink water or black coffee, stay busy, remind yourself hunger waves pass in 20 minutes. If unbearable, it's okay to break your fast and try again tomorrow.";
+"ai.response.plan" = "Based on your profile, I recommend the %@ plan (%d hours fasting, %d hours eating). This is tailored to your BMI and health status.";
+"ai.response.plan_no_profile" = "Please complete your health profile first so I can recommend a personalized fasting plan.";
+"ai.response.calorie" = "Based on your profile, your daily calorie target is %d kcal with a %d kcal deficit for weight loss.";
+"ai.response.calorie_no_profile" = "Please complete your health profile to get personalized calorie recommendations.";
+"ai.response.weight" = "Weight loss during fasting: expect 0.5-1 kg/week with consistent fasting + calorie control. First week may show more loss due to water weight. Focus on weekly averages, not daily fluctuations.";
+"ai.response.exercise" = "Light to moderate exercise is fine during fasting. Best timing: end of fasting period or during eating window. Avoid intense workouts during extended fasts. Stay hydrated!";
+"ai.response.period" = "During menstruation, consider reducing fasting intensity (12:12 or 14:10). Prioritize nutrition and rest. Some women prefer not to fast during their period - listen to your body.";
+"ai.response.beginner" = "Start with 12:12 (fast 12h, eat 12h) for 1-2 weeks. Then progress to 14:10, then 16:8. Don't rush - building the habit is more important than intensity. Drink plenty of water!";
+"ai.response.default" = "That's a great question about fasting! The key principles are: stay hydrated, break your fast gently, listen to your body, and be consistent. Would you like more specific advice? Try asking about drinks, hunger, exercise, or your personalized plan.";
+
+/* Settings */
+"settings.section.profile" = "Profile";
+"settings.section.notifications" = "Notifications";
+"settings.section.ai" = "AI Assistant";
+"settings.section.appearance" = "Appearance";
+"settings.section.privacy" = "Privacy & Data";
+"settings.section.iap" = "Pro Upgrade";
+"settings.section.about" = "About";
+"settings.edit_profile" = "Edit Profile";
+"settings.profile.not_set" = "Not set yet";
+"settings.notify.fast_start" = "Fasting Start Reminder";
+"settings.notify.eat_window" = "Eating Window Open";
+"settings.notify.eat_close" = "Eating Window Closing (30 min)";
+"settings.notify.daily_progress" = "Daily Progress Check-in (9 PM)";
+"settings.ai.enabled" = "AI Features Enabled";
+"settings.ai.weekly_report" = "Auto Weekly Report";
+"settings.ai.clear_history" = "Clear AI Chat History";
+"settings.ai.clear_history.confirm" = "This will delete all AI chat records. This cannot be undone.";
+"settings.ai.cleared" = "AI chat history cleared.";
+"settings.appearance" = "Theme";
+"settings.appearance.system" = "Follow System";
+"settings.appearance.light" = "Light Mode";
+"settings.appearance.dark" = "Dark Mode";
+"settings.privacy.clear_local" = "Clear All Local Data";
+"settings.privacy.clear_local.confirm" = "This will delete all local data including weight, food records, and profile. This cannot be undone.";
+"settings.privacy.clear_cloud" = "Clear iCloud Sync Data";
+"settings.privacy.clear_cloud.confirm" = "This will delete fasting records synced to iCloud. This cannot be undone.";
+"settings.privacy.cleared" = "All local data cleared.";
+"settings.privacy.cloud_cleared" = "iCloud data cleared.";
+"settings.iap.upgrade" = "Upgrade to Pro — $3.99";
+"settings.iap.restore" = "Restore Purchase";
+"settings.iap.pro_unlocked" = "Pro Unlocked ✓";
+"settings.iap.success" = "Thank you!";
+"settings.iap.success.msg" = "Pro features are now unlocked.";
+"settings.iap.restored" = "Restored";
+"settings.iap.restored.msg" = "Your Pro purchase has been restored.";
+"settings.about.version" = "Version";
+"settings.about.privacy" = "Privacy Policy";
+"settings.about.terms" = "Terms of Service";
+"settings.about.rate" = "Rate EmptyRhythm";
+"settings.about.contact" = "Contact Support";
+"common.confirm" = "Confirm";
+
+/* Profile Setup */
+"profile.setup.title" = "Set Up Your Profile";
+"profile.step.gender.title" = "What's your gender?";
+"profile.step.gender.subtitle" = "We personalize your fasting plan based on your physiology.";
+"profile.step.age.title" = "How old are you?";
+"profile.step.age.subtitle" = "Age affects your metabolism and recommended fasting intensity.";
+"profile.step.body.title" = "Your current body";
+"profile.step.body.subtitle" = "Enter your height and weight to calculate BMI and calorie targets.";
+"profile.step.goal.title" = "What's your goal?";
+"profile.step.goal.subtitle" = "Set your target weight and we'll predict your timeline.";
+"profile.step.lifestyle.title" = "Your lifestyle";
+"profile.step.lifestyle.subtitle" = "Help us tailor your fasting plan to your daily routine.";
+"profile.height" = "Height";
+"profile.weight" = "Current Weight";
+"profile.target_weight" = "Target Weight";
+"profile.sport_level" = "Activity Level";
+"profile.work_rest" = "Sleep Schedule";
+"profile.gastro_sensitive" = "Sensitive Stomach";
+"profile.period_sensitive" = "Period Discomfort (Female)";
+"profile.years_old" = "years old";
+"profile.goal.already_reached" = "You've already reached your target weight! We'll help you maintain it.";
+"profile.goal.prediction" = "You need to lose %.1f kg. Estimated %d weeks with consistent fasting.";

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+
+    <!-- 1. 用户体质档案（本地，不同步） -->
+    <entity name="UserProfile" representedClassName="UserProfile" syncable="YES" codeGenerationType="class">
+        <attribute name="userID" attributeType="String"/>
+        <attribute name="gender" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="age" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="height" attributeType="Double" defaultValueString="0"/>
+        <attribute name="currentWeight" attributeType="Double" defaultValueString="0"/>
+        <attribute name="targetWeight" attributeType="Double" defaultValueString="0"/>
+        <attribute name="bmi" attributeType="Double" defaultValueString="0"/>
+        <attribute name="bmr" attributeType="Double" defaultValueString="0"/>
+        <attribute name="dailyCalorieStandard" attributeType="Double" defaultValueString="0"/>
+        <attribute name="sportLevel" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="workRestType" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="isGastroSensitive" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isGirlPeriodSensitive" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="updateTime" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+
+    <!-- 2. 断食方案（iCloud 同步） -->
+    <entity name="FastPlan" representedClassName="FastPlan" syncable="YES" codeGenerationType="class">
+        <attribute name="planID" attributeType="String"/>
+        <attribute name="planName" attributeType="String" defaultValueString=""/>
+        <attribute name="fastHour" attributeType="Integer 16" defaultValueString="16"/>
+        <attribute name="eatHour" attributeType="Integer 16" defaultValueString="8"/>
+        <attribute name="startTime" attributeType="String" defaultValueString="20:00"/>
+        <attribute name="endTime" attributeType="String" defaultValueString="12:00"/>
+        <attribute name="isAICustom" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="planDesc" attributeType="String" defaultValueString=""/>
+        <attribute name="isCurrentUse" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="createTime" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+
+    <!-- 3. 断食打卡记录（iCloud 同步） -->
+    <entity name="FastRecord" representedClassName="FastRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="recordID" attributeType="String"/>
+        <attribute name="startTime" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="targetHours" attributeType="Double" defaultValueString="16"/>
+        <attribute name="actualHours" attributeType="Double" defaultValueString="0"/>
+        <attribute name="status" attributeType="Integer 16" defaultValueString="0"/>
+        <!-- status: 0=进行中, 1=完成, 2=中断 -->
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="createTime" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+
+    <!-- 4. 每日饮食记录（本地，不同步） -->
+    <entity name="DailyFoodRecord" representedClassName="DailyFoodRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="recordID" attributeType="String"/>
+        <attribute name="recordDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="mealType" attributeType="Integer 16" defaultValueString="0"/>
+        <!-- mealType: 0=早餐,1=午餐,2=晚餐,3=加餐,4=零食饮品,5=宵夜 -->
+        <attribute name="foodName" attributeType="String" defaultValueString=""/>
+        <attribute name="foodWeight" attributeType="Double" defaultValueString="100"/>
+        <attribute name="calorie" attributeType="Double" defaultValueString="0"/>
+        <attribute name="carb" attributeType="Double" defaultValueString="0"/>
+        <attribute name="protein" attributeType="Double" defaultValueString="0"/>
+        <attribute name="fat" attributeType="Double" defaultValueString="0"/>
+        <attribute name="fiber" attributeType="Double" defaultValueString="0"/>
+        <attribute name="createTime" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+
+    <!-- 5. 体重记录（本地，不同步） -->
+    <entity name="WeightRecord" representedClassName="WeightRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="weightID" attributeType="String"/>
+        <attribute name="recordDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="weight" attributeType="Double" defaultValueString="0"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="createTime" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+
+    <!-- 6. AI 对话记录（本地，不同步） -->
+    <entity name="AIChatRecord" representedClassName="AIChatRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="chatID" attributeType="String"/>
+        <attribute name="userContent" attributeType="String" defaultValueString=""/>
+        <attribute name="aiContent" attributeType="String" defaultValueString=""/>
+        <attribute name="chatTime" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isSoftDeleted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
+
+    <!-- 7. AI 周复盘报告（本地，不同步） -->
+    <entity name="AIWeeklyReport" representedClassName="AIWeeklyReport" syncable="YES" codeGenerationType="class">
+        <attribute name="reportID" attributeType="String"/>
+        <attribute name="weekDate" attributeType="String" defaultValueString=""/>
+        <attribute name="score" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="successCount" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="failCount" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="weightChange" attributeType="Double" defaultValueString="0"/>
+        <attribute name="reportContent" attributeType="String" defaultValueString=""/>
+        <attribute name="createTime" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+
+    <!-- 8. 苹果健康运动数据（本地，不同步） -->
+    <entity name="HealthRecord" representedClassName="HealthRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="healthID" attributeType="String"/>
+        <attribute name="recordDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="stepCount" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="runDistance" attributeType="Double" defaultValueString="0"/>
+        <attribute name="activeCalorie" attributeType="Double" defaultValueString="0"/>
+        <attribute name="activeTime" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="restHeartRate" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="dailyHealthScore" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="healthWarningDesc" optional="YES" attributeType="String"/>
+        <attribute name="createTime" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+
+    <elements>
+        <element name="UserProfile" positionX="-63" positionY="-18" width="128" height="269"/>
+        <element name="FastPlan" positionX="160" positionY="-18" width="128" height="209"/>
+        <element name="FastRecord" positionX="160" positionY="220" width="128" height="179"/>
+        <element name="DailyFoodRecord" positionX="-63" positionY="280" width="128" height="224"/>
+        <element name="WeightRecord" positionX="380" positionY="-18" width="128" height="134"/>
+        <element name="AIChatRecord" positionX="380" positionY="160" width="128" height="119"/>
+        <element name="AIWeeklyReport" positionX="380" positionY="320" width="128" height="164"/>
+        <element name="HealthRecord" positionX="-63" positionY="540" width="128" height="209"/>
+    </elements>
+</model>
