@@ -56,6 +56,7 @@ class ProfileSetupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        hidesBottomBarWhenPushed = true  // push 时隐藏 tabBar
         view.setPageBackground()
         title = isEditMode ? L("settings.edit_profile") : L("profile.setup.title")
         if isEditMode {

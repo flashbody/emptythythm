@@ -233,6 +233,7 @@ class SettingsViewController: UIViewController {
         case .editProfile:
             let vc = ProfileSetupViewController()
             vc.isEditMode = true
+            vc.hidesBottomBarWhenPushed = true  // push 前设置，隐藏 tabBar
             navigationController?.pushViewController(vc, animated: true)
 
         case .appearanceMode:
