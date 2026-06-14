@@ -117,8 +117,10 @@ class FastPlanCell: UITableViewCell {
         descLabel.numberOfLines = 2
         descLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        durationLabel.font = UIFont.systemFont(ofSize: 28, weight: .bold)
+        durationLabel.font = UIFont.systemFont(ofSize: 26, weight: .bold)
         durationLabel.textColor = AppColor.mainTint
+        durationLabel.adjustsFontSizeToFitWidth = true
+        durationLabel.minimumScaleFactor = 0.7
         durationLabel.translatesAutoresizingMaskIntoConstraints = false
 
         recommendBadge.text = "AI"
@@ -139,7 +141,7 @@ class FastPlanCell: UITableViewCell {
         NSLayoutConstraint.activate([
             durationLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             durationLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            durationLabel.widthAnchor.constraint(equalToConstant: 72),
+            durationLabel.widthAnchor.constraint(equalToConstant: 88),
 
             nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 14),
             nameLabel.leadingAnchor.constraint(equalTo: durationLabel.trailingAnchor, constant: 12),
