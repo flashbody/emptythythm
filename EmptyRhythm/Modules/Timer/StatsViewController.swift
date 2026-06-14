@@ -293,10 +293,21 @@ class StatsViewController: UIViewController {
             predictionContent.text = L("stats.prediction_reached")
             return
         }
+        // 防止 dailyDeficit 为 0 导致除以零崩溃
         let dailyDeficit = profile.calorieDeficit
+        guard dailyDeficit > 0 else {
+            predictionContent.text = L("stats.prediction_no_data")
+            return
+        }
         let daysNeeded = (diff * 7700) / dailyDeficit
+        // 防止 daysNeeded 为 inf/NaN 导致 Int 转换崩溃
+        guard daysNeeded.isFinite, daysNeeded > 0, daysNeeded < 3650 else {
+            predictionContent.text = L("stats.prediction_no_data")
+            return
+        }
         let weeksNeeded = Int(ceil(daysNeeded / 7))
-        let targetDate = Calendar.current.date(byAdding: .day, value: Int(daysNeeded), to: Date())!
+        let daysInt = Int(min(daysNeeded, 3650))
+        let targetDate = Calendar.current.date(byAdding: .day, value: daysInt, to: Date()) ?? Date()
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.locale = Locale.current
@@ -308,7 +319,6 @@ class StatsViewController: UIViewController {
     }
 
     private func updateWeeklyReport() {
-        let successCount = fastRecords.filter { $0.status == 1 }.count
         let weightChange = weightRecords.count >= 2 ? (weightRecords.last!.weight - weightRecords[max(0, weightRecords.count - 8)].weight) : 0
         AIFastPlanEngine.shared.generateWeeklyReport(
             fastRecords: fastRecords,

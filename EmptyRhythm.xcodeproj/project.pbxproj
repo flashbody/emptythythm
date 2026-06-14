@@ -79,7 +79,7 @@
 		2DB11DC017D940EB377193D0 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		2DC19877AD211EBAB46998C5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		32143A26DC4D3E1CF3931A02 /* FoodCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCameraViewController.swift; sourceTree = "<group>"; };
-		32217A80AE9F34E3E3015DAA /* EmptyRhythmTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = EmptyRhythmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32217A80AE9F34E3E3015DAA /* EmptyRhythmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmptyRhythmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F0EB276F9E913C60D4E5AB /* EmptyRhythmWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmptyRhythmWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4624E8C91A3C25366137637C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		465AB0BF63E16BFEF21CC9B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -417,7 +417,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					87367FC76503236DDF5A3A8C = {
-						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 					D88B526B6D8A6A02501A4AF9 = {
@@ -617,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = S8V35YCAD7;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -730,6 +730,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = S8V35YCAD7;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
