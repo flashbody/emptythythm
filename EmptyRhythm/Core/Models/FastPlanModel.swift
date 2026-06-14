@@ -12,7 +12,7 @@ struct FastPlanModel: Identifiable {
     var planDesc: String
     var isCurrentUse: Bool
 
-    var displayName: String { "\(fastHour):\(eatHour)" }
+    var displayName: String { String(format: "%d:%02d", fastHour, eatHour) }
 
     var totalHours: Int { fastHour + eatHour }
 }
