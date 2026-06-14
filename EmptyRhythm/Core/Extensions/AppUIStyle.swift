@@ -182,3 +182,17 @@ struct AppearanceManager {
         ]
     }
 }
+
+// MARK: - UIViewController 通用扩展
+extension UIViewController {
+    /// 为当前页面添加「点击空白收起键盘」手势（cancelsTouchesInView=false 不影响其他点击）
+    func addDismissKeyboardGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboardGlobal))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc private func dismissKeyboardGlobal() {
+        view.endEditing(true)
+    }
+}

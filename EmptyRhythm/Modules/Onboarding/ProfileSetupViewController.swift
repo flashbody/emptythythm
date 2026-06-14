@@ -56,8 +56,14 @@ class ProfileSetupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        hidesBottomBarWhenPushed = true  // push 时隐藏 tabBar
+        hidesBottomBarWhenPushed = true
         view.setPageBackground()
+
+        // 点击空白收起键盘
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+
         title = isEditMode ? L("settings.edit_profile") : L("profile.setup.title")
         if isEditMode {
             navigationItem.leftBarButtonItem = UIBarButtonItem(
@@ -500,6 +506,10 @@ class ProfileSetupViewController: UIViewController {
     @objc private func backTapped() {
         let idx = currentStep.rawValue
         if idx > 0 { showStep(Step(rawValue: idx - 1)!, animated: true) }
+    }
+
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @objc private func dismissVC() { dismiss(animated: true) }

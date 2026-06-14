@@ -25,6 +25,7 @@ class FoodSearchViewController: UIViewController {
         super.viewDidLoad()
         title = L("food.search.title")
         view.setPageBackground()
+        addDismissKeyboardGesture()
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             title: L("common.cancel"), style: .plain, target: self, action: #selector(dismiss_)
         )

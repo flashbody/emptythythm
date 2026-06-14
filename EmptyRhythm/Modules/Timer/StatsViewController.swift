@@ -27,6 +27,7 @@ class StatsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setPageBackground()
+        addDismissKeyboardGesture()
         title = L("tab.stats")
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "plus.circle"),
