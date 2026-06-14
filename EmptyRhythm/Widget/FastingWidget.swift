@@ -42,20 +42,25 @@ struct FastingWidgetProvider: TimelineProvider {
 struct FastingWidgetView: View {
     let entry: FastingWidgetEntry
 
+    // Widget 内置颜色（不依赖主 App 的 UIColor 扩展）
+    private let brandGreen = Color(red: 0.298, green: 0.788, blue: 0.600)   // #4CC999
+    private let bgPage     = Color(red: 0.973, green: 0.976, blue: 0.980)   // #F8F9FA
+    private let separator  = Color(red: 0.898, green: 0.898, blue: 0.918)   // #E5E5EA
+
     var body: some View {
         ZStack {
-            Color(UIColor(hex: "#F8F9FA"))
+            bgPage
             VStack(spacing: 8) {
                 ZStack {
                     Circle()
-                        .stroke(Color(UIColor(hex: "#E5E5EA")), lineWidth: 8)
+                        .stroke(separator, lineWidth: 8)
                     Circle()
                         .trim(from: 0, to: entry.progress)
-                        .stroke(Color(UIColor(hex: "#4CC999")), style: StrokeStyle(lineWidth: 8, lineCap: .round))
+                        .stroke(brandGreen, style: StrokeStyle(lineWidth: 8, lineCap: .round))
                         .rotationEffect(.degrees(-90))
                     Text(String(format: "%.0f%%", entry.progress * 100))
                         .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(Color(UIColor(hex: "#4CC999")))
+                        .foregroundColor(brandGreen)
                 }
                 .frame(width: 80, height: 80)
 
