@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — EmptyRhythm</title>
+  <style>
+    :root { --brand:#4CC999; --text:#1D1D1F; --sub:#6E6E73; --bg:#F8F9FA; --card:#FFFFFF; --border:#E5E5EA; --radius:12px; }
+    @media (prefers-color-scheme:dark) { :root { --text:#F5F5F7; --sub:#86868B; --bg:#000; --card:#1C1C1E; --border:#38383A; } }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; padding:0 16px 60px; }
+    header { max-width:720px; margin:0 auto; padding:48px 0 24px; text-align:center; }
+    .logo { font-size:40px; margin-bottom:8px; }
+    header h1 { font-size:28px; font-weight:700; color:var(--brand); }
+    header p { color:var(--sub); font-size:14px; margin-top:6px; }
+    .lang-bar { display:flex; justify-content:center; gap:8px; margin-bottom:32px; }
+    .lang-btn { padding:6px 18px; border-radius:20px; border:1.5px solid var(--border); background:var(--card); color:var(--sub); font-size:13px; font-weight:500; cursor:pointer; transition:all .2s; }
+    .lang-btn.active { background:var(--brand); border-color:var(--brand); color:#fff; }
+    .content { max-width:720px; margin:0 auto; display:none; }
+    .content.active { display:block; }
+    .card { background:var(--card); border-radius:var(--radius); padding:24px; margin-bottom:16px; border:1px solid var(--border); }
+    .card h2 { font-size:17px; font-weight:600; color:var(--brand); margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+    .card h2 .icon { font-size:20px; }
+    .card p { font-size:15px; margin-bottom:8px; }
+    .card p:last-child { margin-bottom:0; }
+    .card ul { padding-left:20px; }
+    .card ul li { font-size:15px; margin-bottom:6px; }
+    .highlight { background:rgba(76,201,153,.12); border-left:3px solid var(--brand); border-radius:0 8px 8px 0; padding:12px 16px; margin:12px 0; font-size:14px; }
+    .contact-link { color:var(--brand); text-decoration:none; font-weight:500; }
+    footer { max-width:720px; margin:32px auto 0; text-align:center; font-size:13px; color:var(--sub); }
+    footer a { color:var(--brand); text-decoration:none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">⏱️</div>
+  <h1 id="header-title">Terms of Service</h1>
+  <p id="header-sub">EmptyRhythm · Last updated: June 14, 2026</p>
+</header>
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="switchLang('en',this)">English</button>
+  <button class="lang-btn" onclick="switchLang('de',this)">Deutsch</button>
+  <button class="lang-btn" onclick="switchLang('fr',this)">Français</button>
+</div>
+
+<!-- ENGLISH -->
+<div class="content active" id="lang-en">
+  <div class="card"><h2><span class="icon">📜</span>Acceptance of Terms</h2>
+    <p>By downloading or using EmptyRhythm, you agree to be bound by these Terms of Service. If you do not agree, please do not use the App.</p></div>
+  <div class="card"><h2><span class="icon">📱</span>Use of the App</h2>
+    <p>EmptyRhythm is an intermittent fasting tracker designed for personal health management. You may use the App for personal, non-commercial purposes only.</p>
+    <p>You agree not to: reverse engineer the App, use it for unlawful purposes, or attempt to gain unauthorized access to any systems.</p></div>
+  <div class="card"><h2><span class="icon">⚕️</span>Medical Disclaimer</h2>
+    <div class="highlight"><strong>Important:</strong> EmptyRhythm is not a medical device and does not provide medical advice. All content, including AI-generated recommendations, is for informational purposes only.</div>
+    <p>Always consult a qualified healthcare professional before starting any fasting program, especially if you have pre-existing medical conditions, are pregnant, breastfeeding, or under 18.</p></div>
+  <div class="card"><h2><span class="icon">🛒</span>In-App Purchases</h2>
+    <p>The Pro upgrade ($3.99) is a one-time purchase processed by Apple. All sales are final unless required by applicable law. Refund requests must be submitted to Apple directly.</p></div>
+  <div class="card"><h2><span class="icon">🔄</span>Updates & Changes</h2>
+    <p>We reserve the right to modify or discontinue the App at any time. We may update these Terms periodically. Continued use of the App constitutes acceptance of updated Terms.</p></div>
+  <div class="card"><h2><span class="icon">⚖️</span>Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, EmptyRhythm and its developers shall not be liable for any indirect, incidental, or consequential damages arising from your use of the App.</p></div>
+  <div class="card"><h2><span class="icon">🌍</span>Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with applicable laws. Any disputes shall be resolved through good-faith negotiation or, if necessary, binding arbitration.</p></div>
+  <div class="card"><h2><span class="icon">✉️</span>Contact</h2>
+    <p>Questions about these Terms? Contact us at: <a href="mailto:flashbody@foxmail.com" class="contact-link">flashbody@foxmail.com</a></p></div>
+</div>
+
+<!-- DEUTSCH -->
+<div class="content" id="lang-de">
+  <div class="card"><h2><span class="icon">📜</span>Annahme der Bedingungen</h2>
+    <p>Durch das Herunterladen oder Verwenden von EmptyRhythm stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie nicht zustimmen, verwenden Sie die App bitte nicht.</p></div>
+  <div class="card"><h2><span class="icon">📱</span>Nutzung der App</h2>
+    <p>EmptyRhythm ist ein Intervallfasten-Tracker für das persönliche Gesundheitsmanagement. Sie dürfen die App nur für persönliche, nicht-kommerzielle Zwecke verwenden.</p></div>
+  <div class="card"><h2><span class="icon">⚕️</span>Medizinischer Haftungsausschluss</h2>
+    <div class="highlight"><strong>Wichtig:</strong> EmptyRhythm ist kein Medizinprodukt und bietet keine medizinische Beratung. Alle Inhalte, einschließlich KI-generierter Empfehlungen, dienen nur zu Informationszwecken.</div>
+    <p>Konsultieren Sie immer einen qualifizierten Arzt, bevor Sie ein Fastenprogramm beginnen, insbesondere bei Vorerkrankungen, Schwangerschaft, Stillzeit oder unter 18 Jahren.</p></div>
+  <div class="card"><h2><span class="icon">🛒</span>In-App-Käufe</h2>
+    <p>Das Pro-Upgrade (3,99 €) ist ein einmaliger Kauf, der von Apple abgewickelt wird. Alle Verkäufe sind endgültig. Rückerstattungsanfragen müssen direkt an Apple gestellt werden.</p></div>
+  <div class="card"><h2><span class="icon">⚖️</span>Haftungsbeschränkung</h2>
+    <p>Im maximalen gesetzlich zulässigen Umfang haften EmptyRhythm und seine Entwickler nicht für indirekte, zufällige oder Folgeschäden aus der Nutzung der App.</p></div>
+  <div class="card"><h2><span class="icon">✉️</span>Kontakt</h2>
+    <p>Fragen zu diesen Bedingungen? Kontaktieren Sie uns: <a href="mailto:flashbody@foxmail.com" class="contact-link">flashbody@foxmail.com</a></p></div>
+</div>
+
+<!-- FRANÇAIS -->
+<div class="content" id="lang-fr">
+  <div class="card"><h2><span class="icon">📜</span>Acceptation des Conditions</h2>
+    <p>En téléchargeant ou en utilisant EmptyRhythm, vous acceptez d'être lié par ces Conditions d'Utilisation. Si vous n'êtes pas d'accord, veuillez ne pas utiliser l'Application.</p></div>
+  <div class="card"><h2><span class="icon">📱</span>Utilisation de l'Application</h2>
+    <p>EmptyRhythm est un tracker de jeûne intermittent conçu pour la gestion personnelle de la santé. Vous pouvez utiliser l'Application uniquement à des fins personnelles et non commerciales.</p></div>
+  <div class="card"><h2><span class="icon">⚕️</span>Avertissement Médical</h2>
+    <div class="highlight"><strong>Important :</strong> EmptyRhythm n'est pas un dispositif médical et ne fournit pas de conseils médicaux. Tout le contenu, y compris les recommandations générées par IA, est uniquement à titre informatif.</div>
+    <p>Consultez toujours un professionnel de santé qualifié avant de commencer tout programme de jeûne, surtout en cas de conditions médicales préexistantes, de grossesse, d'allaitement ou si vous avez moins de 18 ans.</p></div>
+  <div class="card"><h2><span class="icon">🛒</span>Achats Intégrés</h2>
+    <p>La mise à niveau Pro (3,99 €) est un achat unique traité par Apple. Toutes les ventes sont définitives. Les demandes de remboursement doivent être soumises directement à Apple.</p></div>
+  <div class="card"><h2><span class="icon">⚖️</span>Limitation de Responsabilité</h2>
+    <p>Dans la mesure maximale permise par la loi, EmptyRhythm et ses développeurs ne sauraient être tenus responsables de dommages indirects, accessoires ou consécutifs découlant de votre utilisation de l'Application.</p></div>
+  <div class="card"><h2><span class="icon">✉️</span>Contact</h2>
+    <p>Questions sur ces Conditions ? Contactez-nous : <a href="mailto:flashbody@foxmail.com" class="contact-link">flashbody@foxmail.com</a></p></div>
+</div>
+
+<footer>
+  <p>© 2026 EmptyRhythm · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:flashbody@foxmail.com">flashbody@foxmail.com</a></p>
+</footer>
+<script>
+function switchLang(lang, btn) {
+  document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+  btn.classList.add('active');
+  const t = { en:['Terms of Service','EmptyRhythm · Last updated: June 14, 2026'], de:['Nutzungsbedingungen','EmptyRhythm · Zuletzt aktualisiert: 14. Juni 2026'], fr:["Conditions d'Utilisation",'EmptyRhythm · Dernière mise à jour : 14 juin 2026'] };
+  document.getElementById('header-title').textContent = t[lang][0];
+  document.getElementById('header-sub').textContent = t[lang][1];
+}
+</script>
+</body>
+</html>

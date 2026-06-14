@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — EmptyRhythm</title>
+  <style>
+    :root {
+      --brand: #4CC999;
+      --text: #1D1D1F;
+      --sub: #6E6E73;
+      --bg: #F8F9FA;
+      --card: #FFFFFF;
+      --border: #E5E5EA;
+      --radius: 12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #F5F5F7;
+        --sub: #86868B;
+        --bg: #000000;
+        --card: #1C1C1E;
+        --border: #38383A;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px 60px;
+    }
+    header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 0 24px;
+      text-align: center;
+    }
+    .logo { font-size: 40px; margin-bottom: 8px; }
+    header h1 { font-size: 28px; font-weight: 700; color: var(--brand); }
+    header p { color: var(--sub); font-size: 14px; margin-top: 6px; }
+
+    /* Language switcher */
+    .lang-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .lang-btn {
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1.5px solid var(--border);
+      background: var(--card);
+      color: var(--sub);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .lang-btn.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+    }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; display: none; }
+    .content.active { display: block; }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .card h2 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--brand);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h2 .icon { font-size: 20px; }
+    .card p { font-size: 15px; color: var(--text); margin-bottom: 8px; }
+    .card p:last-child { margin-bottom: 0; }
+    .card ul { padding-left: 20px; }
+    .card ul li { font-size: 15px; margin-bottom: 6px; }
+    .highlight {
+      background: rgba(76,201,153,.12);
+      border-left: 3px solid var(--brand);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 14px;
+    }
+    .contact-link {
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    footer {
+      max-width: 720px;
+      margin: 32px auto 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--sub);
+    }
+    footer a { color: var(--brand); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">⏱️</div>
+  <h1 id="header-title">Privacy Policy</h1>
+  <p id="header-sub">EmptyRhythm · Last updated: June 14, 2026</p>
+</header>
+
+<!-- Language Switcher -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="switchLang('en')">English</button>
+  <button class="lang-btn" onclick="switchLang('de')">Deutsch</button>
+  <button class="lang-btn" onclick="switchLang('fr')">Français</button>
+</div>
+
+<!-- ═══════════════════════════════ ENGLISH ═══════════════════════════════ -->
+<div class="content active" id="lang-en">
+
+  <div class="card">
+    <h2><span class="icon">🔒</span>Overview</h2>
+    <p>EmptyRhythm ("we", "our", or "the App") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our intermittent fasting app.</p>
+    <div class="highlight">
+      <strong>Key principle:</strong> Your health and personal data stays on your device. We do not sell, share, or upload your sensitive health information to any server.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">📋</span>Information We Collect</h2>
+    <p><strong>Information you provide directly:</strong></p>
+    <ul>
+      <li>Body profile: gender, age, height, weight, target weight</li>
+      <li>Lifestyle data: activity level, sleep schedule, health sensitivities</li>
+      <li>Food diary: meals, calorie intake, nutritional data</li>
+      <li>Weight records and fasting logs</li>
+    </ul>
+    <p style="margin-top:12px"><strong>Information collected automatically:</strong></p>
+    <ul>
+      <li>Apple Health data (steps, heart rate, calories) — <em>only if you grant permission</em></li>
+      <li>App usage data stored locally on your device</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🏠</span>Data Storage</h2>
+    <p>All sensitive health data is stored <strong>locally on your device</strong> using CoreData and is never uploaded to our servers.</p>
+    <p>The following data may sync via <strong>iCloud</strong> (Apple's encrypted sync service) if you sign in with Apple ID:</p>
+    <ul>
+      <li>Fasting records and plans</li>
+      <li>App configuration and preferences</li>
+    </ul>
+    <div class="highlight">
+      Body profile, weight records, food diary, and AI chat history are <strong>never synced to iCloud</strong> and remain only on your device.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🤖</span>AI Features</h2>
+    <p>EmptyRhythm uses on-device AI (Apple Foundation Models) for personalized fasting recommendations. On supported devices (iPhone 15 Pro / iPhone 16 and later with iOS 18.1+), all AI processing happens <strong>entirely on your device</strong>.</p>
+    <ul>
+      <li>No personal data is sent to external AI servers</li>
+      <li>AI features can be disabled at any time in Settings</li>
+      <li>AI content is for reference only and does not constitute medical advice</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">📸</span>Camera & Photos</h2>
+    <p>Camera access is requested <strong>only when you use the food photo recognition feature</strong>. Photos are processed locally using Apple's Vision framework and are not uploaded or stored permanently.</p>
+    <p>You can deny camera access at any time — other app features remain fully functional.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">❤️</span>Apple Health (HealthKit)</h2>
+    <p>With your explicit permission, EmptyRhythm can read the following health data:</p>
+    <ul>
+      <li>Step count, running distance, active energy burned</li>
+      <li>Exercise time, resting heart rate</li>
+    </ul>
+    <p>We <strong>only read</strong> health data — we do not write to Apple Health without your action. Health data is used solely for generating personalized exercise recommendations and health warnings within the app.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🔔</span>Push Notifications</h2>
+    <p>Notifications are <strong>opt-in only</strong>. We never request notification permission automatically. You can enable or disable each notification type individually in Settings.</p>
+    <p>Notification types include: fasting start reminders, eating window alerts, and daily progress check-ins.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🍎</span>Sign in with Apple</h2>
+    <p>We use Sign in with Apple for authentication. We only receive a unique Apple User ID — we never access your real name or email address unless you choose to share them.</p>
+    <p>You can sign out and delete your account data at any time from Settings → Privacy & Data.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🛒</span>In-App Purchases</h2>
+    <p>EmptyRhythm offers a one-time Pro upgrade ($3.99). All purchases are processed by Apple through the App Store. We do not collect or store any payment information.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">👶</span>Children's Privacy</h2>
+    <p>EmptyRhythm is not intended for children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us immediately.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🌍</span>Third-Party Services</h2>
+    <p>EmptyRhythm does not integrate any third-party analytics, advertising, or tracking SDKs. We do not share your data with any third parties.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🗑️</span>Data Deletion</h2>
+    <p>You can delete all your data at any time:</p>
+    <ul>
+      <li><strong>Local data:</strong> Settings → Privacy & Data → Clear All Local Data</li>
+      <li><strong>iCloud data:</strong> Settings → Privacy & Data → Clear iCloud Sync Data</li>
+      <li><strong>AI history:</strong> Settings → AI Assistant → Clear AI Chat History</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">📝</span>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by updating the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">✉️</span>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+    <p style="margin-top:8px"><a href="mailto:flashbody@foxmail.com" class="contact-link">flashbody@foxmail.com</a></p>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════ DEUTSCH ═══════════════════════════════ -->
+<div class="content" id="lang-de">
+
+  <div class="card">
+    <h2><span class="icon">🔒</span>Übersicht</h2>
+    <p>EmptyRhythm ("wir", "uns" oder "die App") verpflichtet sich zum Schutz Ihrer Privatsphäre. Diese Datenschutzrichtlinie erläutert, wie wir Ihre Informationen bei der Nutzung unserer Intervallfasten-App erfassen, verwenden und schützen.</p>
+    <div class="highlight">
+      <strong>Grundprinzip:</strong> Ihre Gesundheits- und persönlichen Daten verbleiben auf Ihrem Gerät. Wir verkaufen, teilen oder laden Ihre sensiblen Gesundheitsdaten nicht auf Server hoch.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">📋</span>Erhobene Informationen</h2>
+    <p><strong>Von Ihnen direkt bereitgestellte Informationen:</strong></p>
+    <ul>
+      <li>Körperprofil: Geschlecht, Alter, Größe, Gewicht, Zielgewicht</li>
+      <li>Lebensstildaten: Aktivitätsniveau, Schlafrhythmus, gesundheitliche Empfindlichkeiten</li>
+      <li>Ernährungstagebuch: Mahlzeiten, Kalorienaufnahme, Nährstoffdaten</li>
+      <li>Gewichtsaufzeichnungen und Fastenprotokolle</li>
+    </ul>
+    <p style="margin-top:12px"><strong>Automatisch erfasste Informationen:</strong></p>
+    <ul>
+      <li>Apple Health-Daten (Schritte, Herzfrequenz, Kalorien) — <em>nur mit Ihrer Erlaubnis</em></li>
+      <li>App-Nutzungsdaten, die lokal auf Ihrem Gerät gespeichert werden</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🏠</span>Datenspeicherung</h2>
+    <p>Alle sensiblen Gesundheitsdaten werden <strong>lokal auf Ihrem Gerät</strong> mit CoreData gespeichert und niemals auf unsere Server hochgeladen.</p>
+    <p>Folgende Daten können über <strong>iCloud</strong> synchronisiert werden (wenn Sie sich mit Apple ID anmelden):</p>
+    <ul>
+      <li>Fastenaufzeichnungen und -pläne</li>
+      <li>App-Konfiguration und Einstellungen</li>
+    </ul>
+    <div class="highlight">
+      Körperprofil, Gewichtsaufzeichnungen, Ernährungstagebuch und KI-Chatverlauf werden <strong>niemals mit iCloud synchronisiert</strong> und verbleiben nur auf Ihrem Gerät.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🤖</span>KI-Funktionen</h2>
+    <p>EmptyRhythm verwendet KI auf dem Gerät (Apple Foundation Models) für personalisierte Fastenempfehlungen. Auf unterstützten Geräten (iPhone 15 Pro / iPhone 16 und neuer mit iOS 18.1+) findet die gesamte KI-Verarbeitung <strong>vollständig auf Ihrem Gerät</strong> statt.</p>
+    <ul>
+      <li>Es werden keine persönlichen Daten an externe KI-Server gesendet</li>
+      <li>KI-Funktionen können jederzeit in den Einstellungen deaktiviert werden</li>
+      <li>KI-Inhalte dienen nur als Referenz und stellen keine medizinische Beratung dar</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">📸</span>Kamera & Fotos</h2>
+    <p>Der Kamerazugriff wird <strong>nur angefordert, wenn Sie die Lebensmittelfoto-Erkennungsfunktion verwenden</strong>. Fotos werden lokal mit Apples Vision-Framework verarbeitet und weder hochgeladen noch dauerhaft gespeichert.</p>
+    <p>Sie können den Kamerazugriff jederzeit verweigern — andere App-Funktionen bleiben vollständig nutzbar.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">❤️</span>Apple Health (HealthKit)</h2>
+    <p>Mit Ihrer ausdrücklichen Erlaubnis kann EmptyRhythm folgende Gesundheitsdaten lesen:</p>
+    <ul>
+      <li>Schrittanzahl, Laufdistanz, aktiv verbrannte Energie</li>
+      <li>Trainingszeit, Ruheherzfrequenz</li>
+    </ul>
+    <p>Wir <strong>lesen nur</strong> Gesundheitsdaten — wir schreiben ohne Ihre Aktion nicht in Apple Health. Gesundheitsdaten werden ausschließlich zur Erstellung personalisierter Trainingsempfehlungen und Gesundheitswarnungen in der App verwendet.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🔔</span>Push-Benachrichtigungen</h2>
+    <p>Benachrichtigungen sind <strong>nur auf Anfrage</strong>. Wir fordern niemals automatisch Benachrichtigungsberechtigungen an. Sie können jeden Benachrichtigungstyp einzeln in den Einstellungen aktivieren oder deaktivieren.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🍎</span>Mit Apple anmelden</h2>
+    <p>Wir verwenden "Mit Apple anmelden" zur Authentifizierung. Wir erhalten nur eine eindeutige Apple-Benutzer-ID — wir greifen niemals auf Ihren echten Namen oder Ihre E-Mail-Adresse zu, es sei denn, Sie entscheiden sich, diese zu teilen.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🛒</span>In-App-Käufe</h2>
+    <p>EmptyRhythm bietet ein einmaliges Pro-Upgrade (3,99 €) an. Alle Käufe werden von Apple über den App Store abgewickelt. Wir erheben oder speichern keine Zahlungsinformationen.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🗑️</span>Datenlöschung</h2>
+    <p>Sie können alle Ihre Daten jederzeit löschen:</p>
+    <ul>
+      <li><strong>Lokale Daten:</strong> Einstellungen → Datenschutz & Daten → Alle lokalen Daten löschen</li>
+      <li><strong>iCloud-Daten:</strong> Einstellungen → Datenschutz & Daten → iCloud-Synchronisierungsdaten löschen</li>
+      <li><strong>KI-Verlauf:</strong> Einstellungen → KI-Assistent → KI-Chatverlauf löschen</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">✉️</span>Kontakt</h2>
+    <p>Bei Fragen zu dieser Datenschutzrichtlinie oder unseren Datenpraktiken kontaktieren Sie uns bitte:</p>
+    <p style="margin-top:8px"><a href="mailto:flashbody@foxmail.com" class="contact-link">flashbody@foxmail.com</a></p>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════ FRANÇAIS ═══════════════════════════════ -->
+<div class="content" id="lang-fr">
+
+  <div class="card">
+    <h2><span class="icon">🔒</span>Aperçu</h2>
+    <p>EmptyRhythm ("nous", "notre" ou "l'Application") s'engage à protéger votre vie privée. Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre application de jeûne intermittent.</p>
+    <div class="highlight">
+      <strong>Principe clé :</strong> Vos données de santé et personnelles restent sur votre appareil. Nous ne vendons, ne partageons ni ne téléchargeons vos informations de santé sensibles sur aucun serveur.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">📋</span>Informations Collectées</h2>
+    <p><strong>Informations que vous fournissez directement :</strong></p>
+    <ul>
+      <li>Profil corporel : sexe, âge, taille, poids, poids cible</li>
+      <li>Données de style de vie : niveau d'activité, horaires de sommeil, sensibilités de santé</li>
+      <li>Journal alimentaire : repas, apport calorique, données nutritionnelles</li>
+      <li>Enregistrements de poids et journaux de jeûne</li>
+    </ul>
+    <p style="margin-top:12px"><strong>Informations collectées automatiquement :</strong></p>
+    <ul>
+      <li>Données Apple Santé (pas, fréquence cardiaque, calories) — <em>uniquement avec votre permission</em></li>
+      <li>Données d'utilisation de l'app stockées localement sur votre appareil</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🏠</span>Stockage des Données</h2>
+    <p>Toutes les données de santé sensibles sont stockées <strong>localement sur votre appareil</strong> via CoreData et ne sont jamais téléchargées sur nos serveurs.</p>
+    <p>Les données suivantes peuvent se synchroniser via <strong>iCloud</strong> (si vous vous connectez avec votre identifiant Apple) :</p>
+    <ul>
+      <li>Enregistrements et plans de jeûne</li>
+      <li>Configuration et préférences de l'app</li>
+    </ul>
+    <div class="highlight">
+      Le profil corporel, les enregistrements de poids, le journal alimentaire et l'historique des chats IA ne sont <strong>jamais synchronisés avec iCloud</strong> et restent uniquement sur votre appareil.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🤖</span>Fonctionnalités IA</h2>
+    <p>EmptyRhythm utilise l'IA sur l'appareil (Apple Foundation Models) pour des recommandations de jeûne personnalisées. Sur les appareils compatibles (iPhone 15 Pro / iPhone 16 et ultérieurs avec iOS 18.1+), tout le traitement IA se fait <strong>entièrement sur votre appareil</strong>.</p>
+    <ul>
+      <li>Aucune donnée personnelle n'est envoyée à des serveurs IA externes</li>
+      <li>Les fonctionnalités IA peuvent être désactivées à tout moment dans Réglages</li>
+      <li>Le contenu IA est uniquement indicatif et ne constitue pas un avis médical</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">📸</span>Appareil Photo & Photos</h2>
+    <p>L'accès à l'appareil photo est demandé <strong>uniquement lorsque vous utilisez la fonction de reconnaissance alimentaire par photo</strong>. Les photos sont traitées localement via le framework Vision d'Apple et ne sont ni téléchargées ni stockées de façon permanente.</p>
+    <p>Vous pouvez refuser l'accès à l'appareil photo à tout moment — les autres fonctionnalités de l'app restent entièrement disponibles.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">❤️</span>Apple Santé (HealthKit)</h2>
+    <p>Avec votre permission explicite, EmptyRhythm peut lire les données de santé suivantes :</p>
+    <ul>
+      <li>Nombre de pas, distance de course, énergie active brûlée</li>
+      <li>Durée d'exercice, fréquence cardiaque au repos</li>
+    </ul>
+    <p>Nous <strong>lisons uniquement</strong> les données de santé — nous n'écrivons pas dans Apple Santé sans votre action. Les données de santé sont utilisées uniquement pour générer des recommandations d'exercice personnalisées et des avertissements de santé dans l'app.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🔔</span>Notifications Push</h2>
+    <p>Les notifications sont <strong>opt-in uniquement</strong>. Nous ne demandons jamais automatiquement la permission de notification. Vous pouvez activer ou désactiver chaque type de notification individuellement dans Réglages.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🍎</span>Se connecter avec Apple</h2>
+    <p>Nous utilisons "Se connecter avec Apple" pour l'authentification. Nous ne recevons qu'un identifiant utilisateur Apple unique — nous n'accédons jamais à votre vrai nom ou adresse e-mail sauf si vous choisissez de les partager.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🛒</span>Achats Intégrés</h2>
+    <p>EmptyRhythm propose une mise à niveau Pro unique (3,99 €). Tous les achats sont traités par Apple via l'App Store. Nous ne collectons ni ne stockons aucune information de paiement.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🗑️</span>Suppression des Données</h2>
+    <p>Vous pouvez supprimer toutes vos données à tout moment :</p>
+    <ul>
+      <li><strong>Données locales :</strong> Réglages → Confidentialité et Données → Effacer toutes les données locales</li>
+      <li><strong>Données iCloud :</strong> Réglages → Confidentialité et Données → Effacer les données iCloud</li>
+      <li><strong>Historique IA :</strong> Réglages → Assistant IA → Effacer l'historique des chats IA</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">✉️</span>Nous Contacter</h2>
+    <p>Pour toute question concernant cette Politique de Confidentialité ou nos pratiques en matière de données, veuillez nous contacter :</p>
+    <p style="margin-top:8px"><a href="mailto:flashbody@foxmail.com" class="contact-link">flashbody@foxmail.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 EmptyRhythm · <a href="terms.html">Terms of Service</a> · <a href="mailto:flashbody@foxmail.com">flashbody@foxmail.com</a></p>
+</footer>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+
+    const titles = {
+      en: ['Privacy Policy', 'EmptyRhythm · Last updated: June 14, 2026'],
+      de: ['Datenschutzrichtlinie', 'EmptyRhythm · Zuletzt aktualisiert: 14. Juni 2026'],
+      fr: ['Politique de Confidentialité', 'EmptyRhythm · Dernière mise à jour : 14 juin 2026']
+    };
+    document.getElementById('header-title').textContent = titles[lang][0];
+    document.getElementById('header-sub').textContent = titles[lang][1];
+    document.documentElement.lang = lang;
+  }
+
+  // Auto-detect browser language
+  const browserLang = navigator.language.slice(0, 2);
+  if (['de', 'fr'].includes(browserLang)) {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if (btn.textContent.toLowerCase().includes(browserLang === 'de' ? 'deutsch' : 'français')) {
+        btn.click();
+      }
+    });
+  }
+</script>
+</body>
+</html>
