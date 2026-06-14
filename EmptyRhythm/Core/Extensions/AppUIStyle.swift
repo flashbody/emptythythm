@@ -185,11 +185,17 @@ struct AppearanceManager {
 
 // MARK: - UIViewController 通用扩展
 extension UIViewController {
-    /// 为当前页面添加「点击空白收起键盘」手势（cancelsTouchesInView=false 不影响其他点击）
+
+    /// 点击空白收起键盘（cancelsTouchesInView=false 不影响其他点击）
     func addDismissKeyboardGesture() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboardGlobal))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+    }
+
+    /// 为 ScrollView / TableView / CollectionView 设置拖动收起键盘
+    func addKeyboardDismissOnScroll(_ scrollViews: UIScrollView...) {
+        scrollViews.forEach { $0.keyboardDismissMode = .onDrag }
     }
 
     @objc private func dismissKeyboardGlobal() {

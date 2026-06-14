@@ -28,6 +28,7 @@ class StatsViewController: UIViewController {
         super.viewDidLoad()
         view.setPageBackground()
         addDismissKeyboardGesture()
+        addKeyboardDismissOnScroll(scrollView)
         title = L("tab.stats")
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "plus.circle"),

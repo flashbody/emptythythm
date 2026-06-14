@@ -34,6 +34,8 @@ class FoodSearchViewController: UIViewController {
         setupCategoryBar()
         setupTableView()
         loadInitialFoods()
+        // 拖动列表收起键盘
+        addKeyboardDismissOnScroll(tableView)
     }
 
     private func setupMealTypePicker() {

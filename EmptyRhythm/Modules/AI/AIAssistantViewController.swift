@@ -28,6 +28,9 @@ class AIAssistantViewController: UIViewController {
         setupUI()
         setupKeyboardObservers()
         addWelcomeMessage()
+        // 点击空白 + 拖动列表收起键盘
+        addDismissKeyboardGesture()
+        addKeyboardDismissOnScroll(tableView)
     }
 
     deinit {

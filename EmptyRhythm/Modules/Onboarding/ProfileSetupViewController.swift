@@ -63,6 +63,8 @@ class ProfileSetupViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        // 拖动 ScrollView 收起键盘
+        addKeyboardDismissOnScroll(scrollView)
 
         title = isEditMode ? L("settings.edit_profile") : L("profile.setup.title")
         if isEditMode {
