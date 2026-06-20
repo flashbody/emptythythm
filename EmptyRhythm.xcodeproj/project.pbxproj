@@ -33,6 +33,7 @@
 		792FD10D8F639D10FB0FC306 /* FastingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15436C5BAB8C3E97D548D50D /* FastingWidget.swift */; };
 		8214850485C3D87369541D82 /* foods_database.json in Resources */ = {isa = PBXBuildFile; fileRef = 09DF7750211B2794140522D7 /* foods_database.json */; };
 		836C296177B396244C49D60E /* FastTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E99F8BE86FCF06023AD315 /* FastTimerManager.swift */; };
+		8DBFC14443D2CD0DCA97FB58 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AC1A5EAA6CFF425BD8F198A /* InfoPlist.strings */; };
 		9024E8A6AA49E306BC3FF38F /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36401AEF0FA35E9BF733C45 /* Vision.framework */; };
 		93BFC567777F88C57E7E7A58 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1BA12726C3B1AA1993D75 /* RecordViewController.swift */; };
 		95DAE9EE619085505F708F94 /* EmptyRhythm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1270A6C69A0AC5F9D3357681 /* EmptyRhythm.xcdatamodeld */; };
@@ -70,6 +71,7 @@
 		03FFF5A575FABABEFF6F5D8E /* FoodSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchViewController.swift; sourceTree = "<group>"; };
 		09DF7750211B2794140522D7 /* foods_database.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foods_database.json; sourceTree = "<group>"; };
 		0B330A24448FEE61BCD1AE4A /* ProfileSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetupViewController.swift; sourceTree = "<group>"; };
+		0E48A1EB99AB709DEECD59E8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F287002197BDF5185ED2FFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		103F8A2101ABC2C93249F737 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		10A00D02D4C20D0B66A68AA8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -79,8 +81,9 @@
 		2DB11DC017D940EB377193D0 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		2DC19877AD211EBAB46998C5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		32143A26DC4D3E1CF3931A02 /* FoodCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCameraViewController.swift; sourceTree = "<group>"; };
-		32217A80AE9F34E3E3015DAA /* EmptyRhythmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmptyRhythmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37F0EB276F9E913C60D4E5AB /* EmptyRhythmWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmptyRhythmWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		32217A80AE9F34E3E3015DAA /* EmptyRhythmTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = EmptyRhythmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		378B6A811F716659B1A34FBB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37F0EB276F9E913C60D4E5AB /* EmptyRhythmWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = EmptyRhythmWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4624E8C91A3C25366137637C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		465AB0BF63E16BFEF21CC9B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5194A737C7AF9AE29AA1CD41 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
@@ -99,9 +102,11 @@
 		A26CD9F55CC310222E9BA3D3 /* FastPlanSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastPlanSelectionViewController.swift; sourceTree = "<group>"; };
 		A53C226AA4E1A9F1B2A68123 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
 		A7A73F086545EBEF3865DD86 /* AIAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAssistantViewController.swift; sourceTree = "<group>"; };
+		A878DAC8F614E3366EED0D42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB51F86F54D93FE940C00722 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		BACB67866685728A1BF8A6B2 /* EmptyRhythm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmptyRhythm.entitlements; sourceTree = "<group>"; };
 		C49B5FA628A1877179EB3453 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		CD26D2E66106B9ABCD0E17B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		DE09BF7496724D0F53145D9A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E12EC68A0C282A6A80F121FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E30782B5C766D287ED8DE713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -110,7 +115,7 @@
 		E6C8FE77948D3201D8EB08AF /* FastPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastPlanModel.swift; sourceTree = "<group>"; };
 		E81D85F02C3776ACCBFAA3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E9D5CE974681115EA94C922A /* AppUIStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIStyle.swift; sourceTree = "<group>"; };
-		EB4DBA6A63BB73BFFD607492 /* EmptyRhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmptyRhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4DBA6A63BB73BFFD607492 /* EmptyRhythm.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = EmptyRhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB920C59BD398B809695C33 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		F068555247545C6634C77D0B /* EmptyRhythmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRhythmTests.swift; sourceTree = "<group>"; };
 		F27913DA6174C2477557FDF7 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
@@ -278,6 +283,7 @@
 		B0573C3C410E7B5F46757F60 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
+				3AC1A5EAA6CFF425BD8F198A /* InfoPlist.strings */,
 				40F9519B816F22EF40AE4344 /* Localizable.strings */,
 			);
 			path = Localizable;
@@ -415,12 +421,15 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					3B5657557300C03DD0EA7E4B = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 					87367FC76503236DDF5A3A8C = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 					D88B526B6D8A6A02501A4AF9 = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -455,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C26924C36F471ADE28FC44B1 /* Assets.xcassets in Resources */,
+				8DBFC14443D2CD0DCA97FB58 /* InfoPlist.strings in Resources */,
 				989D9573F9820490918F5642 /* Localizable.strings in Resources */,
 				8214850485C3D87369541D82 /* foods_database.json in Resources */,
 			);
@@ -531,6 +541,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3AC1A5EAA6CFF425BD8F198A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E48A1EB99AB709DEECD59E8 /* de */,
+				A878DAC8F614E3366EED0D42 /* en */,
+				378B6A811F716659B1A34FBB /* fr */,
+				CD26D2E66106B9ABCD0E17B8 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		40F9519B816F22EF40AE4344 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -619,7 +640,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -699,7 +719,6 @@
 		6514EB0F365D2B55A9B6C9E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -718,7 +737,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EmptyRhythm/App/EmptyRhythm.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -733,7 +751,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -750,7 +767,6 @@
 		ED4009E6506D8D3976BF129B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -769,7 +785,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EmptyRhythm/App/EmptyRhythm.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

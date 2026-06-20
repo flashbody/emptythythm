@@ -41,8 +41,8 @@ targets:
     info:
       path: EmptyRhythm/App/Info.plist
       properties:
-        CFBundleName: "空律"
-        CFBundleDisplayName: "空律"
+        CFBundleName: "EmptyRhythm"
+        CFBundleDisplayName: "EmptyRhythm"
         CFBundleShortVersionString: "$(MARKETING_VERSION)"
         CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
         UILaunchScreen:
