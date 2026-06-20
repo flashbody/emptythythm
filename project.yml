@@ -5,6 +5,7 @@ options:
     iOS: "18.1"
   xcodeVersion: "16.0"
   createIntermediateGroups: true
+  developmentLanguage: en
 
 settings:
   base:
@@ -71,6 +72,11 @@ targets:
             NSUbiquitousContainerIsDocumentScopePublic: true
             NSUbiquitousContainerName: EmptyRhythm
             NSUbiquitousContainerSupportedFolderLevels: Any
+        CFBundleLocalizations:
+          - en
+          - zh-Hans
+          - de
+          - fr
     entitlements:
       path: EmptyRhythm/App/EmptyRhythm.entitlements
       properties:

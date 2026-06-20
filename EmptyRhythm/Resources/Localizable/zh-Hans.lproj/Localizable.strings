@@ -1,0 +1,278 @@
+/* Tabs */
+"tab.timer" = "计时";
+"tab.stats" = "统计";
+"tab.record" = "记录";
+"tab.ai" = "AI";
+"tab.settings" = "设置";
+
+/* Onboarding */
+"onboarding.title" = "空律";
+"onboarding.subtitle" = "智能间歇断食追踪器，AI个性化方案";
+"onboarding.signin" = "使用 Apple 账号登录";
+"onboarding.disclaimer" = "AI内容仅供参考，不构成医疗建议。开始断食前请咨询医生。";
+"onboarding.feature.timer" = "精准断食计时器";
+"onboarding.feature.food" = "15000+ 食物热量数据库";
+"onboarding.feature.weight" = "体重追踪与周期预测";
+"onboarding.feature.ai" = "AI个性化断食方案";
+"onboarding.feature.health" = "Apple Health 联动";
+
+/* Timer */
+"timer.start" = "开始断食";
+"timer.stop" = "停止";
+"timer.restart" = "重新开始";
+"timer.start_again" = "新断食";
+"timer.elapsed" = "已断食";
+"timer.remaining" = "剩余";
+"timer.today_stats" = "今日";
+"timer.no_plan" = "选择方案";
+"timer.status.idle" = "准备断食";
+"timer.status.fasting" = "断食中";
+"timer.status.eating" = "进食窗口";
+"timer.status.completed" = "完成！";
+"timer.status.interrupted" = "已中断";
+"timer.completed_today" = "今日任务完成！";
+"timer.stop.title" = "结束断食";
+"timer.stop.message" = "请选择结束方式";
+"timer.stop.complete" = "完成";
+"timer.stop.interrupt" = "中断";
+
+/* Plans */
+"plan.select.title" = "选择断食方案";
+"plan.ai_recommend" = "AI 推荐";
+"plan.preset_plans" = "预设方案";
+"plan.12_12" = "12:12 新手入门";
+"plan.14_10" = "14:10 温和轻断";
+"plan.16_8" = "16:8 经典方案";
+"plan.18_6" = "18:6 进阶减脂";
+"plan.20_4" = "20:4 高强度";
+"plan.5_2" = "5:2 周期断食";
+"plan.12_12.desc" = "新手首选。断食12小时，进食窗口12小时。";
+"plan.14_10.desc" = "温和入门。断食14小时，进食窗口10小时。";
+"plan.16_8.desc" = "最受欢迎。断食16小时，进食窗口8小时。";
+"plan.18_6.desc" = "进阶减脂。断食18小时，进食窗口6小时。";
+"plan.20_4.desc" = "高强度方案。断食20小时，进食窗口4小时。仅限男性。";
+"plan.5_2.desc" = "每周断食2天，其余5天正常饮食。";
+"plan.ai.wellness" = "养生调理方案";
+"plan.ai.wellness.desc" = "温和断食，养护肠胃与整体健康。";
+"plan.ai.gentle" = "温和适配方案";
+"plan.ai.gentle.desc" = "专为敏感体质定制。";
+"plan.ai.normal.desc" = "经典16:8维持健康体重。";
+"plan.ai.overweight.desc" = "延长断食时间，循序渐进减脂。";
+"plan.ai.beginner.desc" = "循序渐进，建立断食习惯。";
+"plan.ai.obese.desc" = "系统化方案，实现显著减重。";
+
+/* BMI */
+"bmi.underweight" = "偏瘦";
+"bmi.normal" = "标准";
+"bmi.overweight" = "超重";
+"bmi.obese" = "肥胖";
+
+/* Gender */
+"gender.female" = "女";
+"gender.male" = "男";
+
+/* Sport */
+"sport.sedentary" = "久坐";
+"sport.light" = "轻度运动";
+"sport.moderate" = "中度运动";
+"sport.intense" = "高强度";
+
+/* Work Rest */
+"workrest.regular" = "规律作息";
+"workrest.nightowl" = "经常熬夜";
+
+/* Stats */
+"stats.streak" = "连续天数";
+"stats.completed" = "完成次数";
+"stats.weight" = "体重 (kg)";
+
+/* Notifications */
+"notification.fast_start.title" = "断食开始！";
+"notification.fast_start.body" = "断食窗口已开启，加油坚持！";
+"notification.eat_window.title" = "进食窗口开启";
+"notification.eat_window.body" = "可以进食了，合理选择食物！";
+"notification.eat_close_warning.title" = "还有30分钟";
+"notification.eat_close_warning.body" = "进食窗口将在30分钟后关闭。";
+"notification.daily_progress.title" = "每日打卡";
+"notification.daily_progress.body" = "今天进展如何？记录你的进度！";
+
+/* Health */
+"health.warning.sedentary" = "久坐时间过长，起来活动一下吧！";
+"health.warning.heart_rate" = "静息心率偏高，注意休息和补水。";
+"health.warning.low_activity" = "今日活动量偏低，散步有助于提升代谢。";
+
+/* Food Categories */
+"food.category.protein" = "蛋白质";
+"food.category.grain" = "主食谷物";
+"food.category.vegetable" = "蔬菜";
+"food.category.fruit" = "水果";
+"food.category.dairy" = "乳制品";
+"food.category.nuts" = "坚果";
+"food.category.beverage" = "饮品";
+"food.category.snack" = "零食";
+"food.category.processed_meat" = "加工肉类";
+"food.category.red_meat" = "红肉";
+"food.category.seafood" = "海鲜";
+"food.category.egg" = "蛋类";
+"food.category.oil" = "油脂";
+"food.category.condiment" = "调味品";
+"food.category.fast_food" = "快餐料理";
+"food.category.dessert" = "甜点";
+"food.gi.very_low" = "极低升糖";
+"food.gi.low" = "低升糖";
+"food.gi.medium" = "中升糖";
+"food.gi.high" = "高升糖";
+
+/* Reports */
+"report.excellent_execution" = "本周表现优秀！断食执行力很强。";
+"report.good_execution" = "本周进展良好，继续保持习惯。";
+"report.need_improvement" = "本周有些挑战，来分析一下原因。";
+"report.weight_down" = "本周减重 %.1f kg，进展很好！";
+"report.weight_up" = "体重增加 %.1f kg，检查一下进食窗口。";
+"report.weight_stable" = "体重稳定，坚持是关键。";
+"report.next_week_tip" = "下周目标：断食期间注意多喝水。";
+
+/* Common */
+"common.cancel" = "取消";
+"common.ok" = "确定";
+"common.save" = "保存";
+"common.error" = "错误";
+"common.done" = "完成";
+"common.next" = "下一步";
+"common.back" = "返回";
+"common.delete" = "删除";
+"common.edit" = "编辑";
+"common.add" = "添加";
+"common.confirm" = "确认";
+
+/* Record */
+"record.today" = "今天";
+"record.yesterday" = "昨天";
+"record.remaining_cal" = "剩余 %d 千卡";
+"record.over_cal" = "超出 %d 千卡";
+"meal.breakfast" = "早餐";
+"meal.lunch" = "午餐";
+"meal.dinner" = "晚餐";
+"meal.snack" = "加餐";
+"meal.drink" = "饮品";
+"meal.late_night" = "宵夜";
+
+/* Food Search */
+"food.search.title" = "添加食物";
+"food.search.placeholder" = "搜索食物...";
+"food.all" = "全部";
+"food.enter_weight" = "输入分量（克）";
+
+/* Camera */
+"camera.title" = "拍照识餐";
+"camera.take_photo" = "拍照 / 从相册选择";
+"camera.analyze" = "识别食物";
+"camera.candidates" = "请选择正确的食物：";
+"camera.disclaimer" = "AI识别仅供参考，准确率约60-70%，请确认后添加。";
+"camera.unavailable.title" = "相机不可用";
+"camera.unavailable.message" = "无法访问相机，你仍可以手动搜索食物。";
+
+/* Stats */
+"stats.log_weight" = "记录体重";
+"stats.no_weight_data" = "暂无体重数据";
+"stats.no_chart_data" = "记录体重后查看图表";
+"stats.prediction_title" = "目标预测";
+"stats.prediction_no_data" = "记录体重并设置目标后查看预测。";
+"stats.prediction_reached" = "恭喜！你已达到目标体重！";
+"stats.prediction_text" = "还需减重 %.1f kg，预计 %d 周达标（%@）。每日热量缺口：%d 千卡。";
+"stats.weekly_report" = "AI 周复盘";
+"stats.success_rate" = "完成率";
+"stats.avg_fast" = "平均断食";
+
+/* AI */
+"ai.disclaimer" = "AI内容仅供参考，不构成医疗建议。如有健康问题请咨询医生。";
+"ai.welcome" = "你好！我是你的断食助手。关于间歇断食、营养或健康目标，随时可以问我。";
+"ai.input.placeholder" = "随时提问...";
+"quick.q1" = "断食期间可以喝什么？";
+"quick.q2" = "断食头晕怎么办？";
+"quick.q3" = "最适合我的方案是什么？";
+"quick.q4" = "每天应该摄入多少卡路里？";
+"quick.q5" = "新手断食技巧";
+"quick.q6" = "断食期间可以运动吗？";
+"ai.response.drinks" = "断食期间可以喝：水、黑咖啡（无糖无奶）、清茶、气泡水。避免：果汁、牛奶、含糖饮料或任何含热量的饮品。";
+"ai.response.dizzy" = "断食初期头晕很常见。建议：多喝水、补充少量盐分或电解质。如症状持续请停止断食并就医。";
+"ai.response.hunger" = "断食期间饥饿感是正常的。技巧：喝水或黑咖啡、保持忙碌、提醒自己饥饿感通常20分钟后消退。实在难受可以明天重新开始。";
+"ai.response.plan" = "根据你的档案，推荐 %@ 方案（断食%d小时，进食%d小时），适合你的BMI和体质。";
+"ai.response.plan_no_profile" = "请先完善健康档案，我才能为你推荐个性化断食方案。";
+"ai.response.calorie" = "根据你的档案，每日目标摄入 %d 千卡，热量缺口 %d 千卡。";
+"ai.response.calorie_no_profile" = "请先完善健康档案，获取个性化热量建议。";
+"ai.response.weight" = "断食减重：坚持断食+控制热量，每周可减0.5-1kg。第一周因水分减少可能更多。关注周均值，不要纠结每日波动。";
+"ai.response.exercise" = "断食期间轻中度运动没问题。最佳时机：断食末期或进食窗口内。避免长时间空腹高强度训练，注意补水。";
+"ai.response.period" = "经期期间建议降低断食强度（12:12或14:10），优先保证营养和休息。部分女性选择经期不断食，听从身体信号。";
+"ai.response.beginner" = "建议从12:12开始，坚持1-2周后升级到14:10，再到16:8。不要急于求成，建立习惯比强度更重要。多喝水！";
+"ai.response.default" = "关于断食的好问题！核心原则：保持水分、温和复食、倾听身体、保持一致。想了解更多？试试问关于饮品、饥饿感、运动或个性化方案。";
+
+/* Settings */
+"settings.section.profile" = "个人档案";
+"settings.section.notifications" = "通知提醒";
+"settings.section.ai" = "AI 助手";
+"settings.section.appearance" = "外观与语言";
+"settings.section.privacy" = "隐私与数据";
+"settings.section.iap" = "Pro 升级";
+"settings.section.about" = "关于";
+"settings.edit_profile" = "编辑档案";
+"settings.profile.not_set" = "尚未设置";
+"settings.notify.fast_start" = "断食开始提醒";
+"settings.notify.eat_window" = "进食窗口开启提醒";
+"settings.notify.eat_close" = "进食窗口关闭预警（提前30分钟）";
+"settings.notify.daily_progress" = "每日进度提醒（晚9点）";
+"settings.ai.enabled" = "开启 AI 功能";
+"settings.ai.weekly_report" = "自动生成周复盘";
+"settings.ai.clear_history" = "清空 AI 对话记录";
+"settings.ai.clear_history.confirm" = "将删除所有 AI 对话记录，此操作不可撤销。";
+"settings.ai.cleared" = "AI 对话记录已清空。";
+"settings.appearance" = "主题外观";
+"settings.appearance.system" = "跟随系统";
+"settings.appearance.light" = "浅色模式";
+"settings.appearance.dark" = "深色模式";
+"settings.privacy.clear_local" = "清空所有本地数据";
+"settings.privacy.clear_local.confirm" = "将删除体重、饮食记录、个人档案等所有本地数据，此操作不可撤销。";
+"settings.privacy.clear_cloud" = "清空 iCloud 同步数据";
+"settings.privacy.clear_cloud.confirm" = "将删除已同步到 iCloud 的断食记录，此操作不可撤销。";
+"settings.privacy.cleared" = "本地数据已清空。";
+"settings.privacy.cloud_cleared" = "iCloud 数据已清空。";
+"settings.iap.upgrade" = "升级 Pro — ¥18";
+"settings.iap.restore" = "恢复购买";
+"settings.iap.pro_unlocked" = "Pro 已解锁 ✓";
+"settings.iap.success" = "感谢支持！";
+"settings.iap.success.msg" = "Pro 功能已解锁。";
+"settings.iap.restored" = "恢复成功";
+"settings.iap.restored.msg" = "已恢复你的 Pro 购买记录。";
+"settings.about.version" = "版本";
+"settings.about.privacy" = "隐私政策";
+"settings.about.terms" = "服务条款";
+"settings.about.rate" = "给空律评分";
+"settings.about.contact" = "联系客服";
+
+/* Profile Setup */
+"profile.setup.title" = "完善个人档案";
+"profile.step.gender.title" = "你的性别是？";
+"profile.step.gender.subtitle" = "我们根据你的生理特征个性化断食方案。";
+"profile.step.age.title" = "你的年龄是？";
+"profile.step.age.subtitle" = "年龄影响代谢率和推荐断食强度。";
+"profile.step.body.title" = "当前体型";
+"profile.step.body.subtitle" = "输入身高体重，自动计算 BMI 和每日热量目标。";
+"profile.step.goal.title" = "你的目标是？";
+"profile.step.goal.subtitle" = "设置目标体重，我们预测你的达标周期。";
+"profile.step.lifestyle.title" = "生活方式";
+"profile.step.lifestyle.subtitle" = "帮我们为你定制最合适的断食节奏。";
+"profile.height" = "身高";
+"profile.weight" = "当前体重";
+"profile.target_weight" = "目标体重";
+"profile.sport_level" = "运动强度";
+"profile.work_rest" = "作息类型";
+"profile.gastro_sensitive" = "肠胃敏感";
+"profile.period_sensitive" = "经期易不适（女性）";
+"profile.years_old" = "岁";
+"profile.goal.already_reached" = "你已达到目标体重！我们帮你维持。";
+"profile.goal.prediction" = "还需减重 %.1f kg，预计 %d 周坚持断食可达标。";
+
+/* Language */
+"settings.language" = "语言";
+"settings.language.guide" = "当前语言：%@\n\n如需切换语言，请前往 iPhone 设置 → 空律 → 语言。";
+"settings.language.open_settings" = "打开设置";

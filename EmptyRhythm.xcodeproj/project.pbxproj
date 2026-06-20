@@ -79,8 +79,8 @@
 		2DB11DC017D940EB377193D0 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		2DC19877AD211EBAB46998C5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		32143A26DC4D3E1CF3931A02 /* FoodCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCameraViewController.swift; sourceTree = "<group>"; };
-		32217A80AE9F34E3E3015DAA /* EmptyRhythmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmptyRhythmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37F0EB276F9E913C60D4E5AB /* EmptyRhythmWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmptyRhythmWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		32217A80AE9F34E3E3015DAA /* EmptyRhythmTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = EmptyRhythmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F0EB276F9E913C60D4E5AB /* EmptyRhythmWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = EmptyRhythmWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4624E8C91A3C25366137637C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		465AB0BF63E16BFEF21CC9B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5194A737C7AF9AE29AA1CD41 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
@@ -102,6 +102,7 @@
 		AB51F86F54D93FE940C00722 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		BACB67866685728A1BF8A6B2 /* EmptyRhythm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmptyRhythm.entitlements; sourceTree = "<group>"; };
 		C49B5FA628A1877179EB3453 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		DE09BF7496724D0F53145D9A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E12EC68A0C282A6A80F121FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E30782B5C766D287ED8DE713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E36401AEF0FA35E9BF733C45 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
@@ -109,7 +110,7 @@
 		E6C8FE77948D3201D8EB08AF /* FastPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastPlanModel.swift; sourceTree = "<group>"; };
 		E81D85F02C3776ACCBFAA3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E9D5CE974681115EA94C922A /* AppUIStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIStyle.swift; sourceTree = "<group>"; };
-		EB4DBA6A63BB73BFFD607492 /* EmptyRhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmptyRhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4DBA6A63BB73BFFD607492 /* EmptyRhythm.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = EmptyRhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB920C59BD398B809695C33 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		F068555247545C6634C77D0B /* EmptyRhythmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRhythmTests.swift; sourceTree = "<group>"; };
 		F27913DA6174C2477557FDF7 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
@@ -414,12 +415,15 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					3B5657557300C03DD0EA7E4B = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 					87367FC76503236DDF5A3A8C = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 					D88B526B6D8A6A02501A4AF9 = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -432,6 +436,7 @@
 				de,
 				en,
 				fr,
+				"zh-Hans",
 			);
 			mainGroup = 2652F07AC4D09ABFC8C3466B;
 			minimizedProjectReferenceProxies = 1;
@@ -535,6 +540,7 @@
 				0F287002197BDF5185ED2FFE /* de */,
 				5AF84BC9D3A18E3B896DF6A5 /* en */,
 				465AB0BF63E16BFEF21CC9B0 /* fr */,
+				DE09BF7496724D0F53145D9A /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -616,7 +622,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -696,7 +701,6 @@
 		6514EB0F365D2B55A9B6C9E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -715,7 +719,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EmptyRhythm/App/EmptyRhythm.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -730,7 +733,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -747,7 +749,6 @@
 		ED4009E6506D8D3976BF129B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -766,7 +767,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EmptyRhythm/App/EmptyRhythm.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
