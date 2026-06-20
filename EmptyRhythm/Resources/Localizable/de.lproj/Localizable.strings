@@ -142,3 +142,8 @@
 "common.back" = "Zurück";
 "common.delete" = "Löschen";
 "common.edit" = "Bearbeiten";
+
+/* Language */
+"settings.language" = "Sprache";
+"settings.language.guide" = "Aktuelle Sprache: %@\n\nUm die Sprache zu ändern, gehen Sie zu iPhone-Einstellungen → EmptyRhythm → Sprache.";
+"settings.language.open_settings" = "Einstellungen öffnen";

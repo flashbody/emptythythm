@@ -271,3 +271,8 @@
 "profile.years_old" = "years old";
 "profile.goal.already_reached" = "You've already reached your target weight! We'll help you maintain it.";
 "profile.goal.prediction" = "You need to lose %.1f kg. Estimated %d weeks with consistent fasting.";
+
+/* Language */
+"settings.language" = "Language";
+"settings.language.guide" = "Current language: %@\n\nTo change the language, go to iPhone Settings → EmptyRhythm → Language.";
+"settings.language.open_settings" = "Open Settings";

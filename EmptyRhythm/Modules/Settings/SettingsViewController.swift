@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController {
         // AI
         case aiEnabled, aiWeeklyReport, clearAIHistory
         // Appearance
-        case appearanceMode
+        case appearanceMode, language
         // Privacy
         case clearLocalData, clearCloudData
         // IAP
@@ -43,7 +43,7 @@ class SettingsViewController: UIViewController {
         [.editProfile],
         [.notifyFastStart, .notifyEatWindow, .notifyEatClose, .notifyDailyProgress],
         [.aiEnabled, .aiWeeklyReport, .clearAIHistory],
-        [.appearanceMode],
+        [.appearanceMode, .language],
         [.clearLocalData, .clearCloudData],
         [.upgradePro, .restorePurchase],
         [.version, .privacyPolicy, .termsOfService, .rateApp, .contactUs],
@@ -127,6 +127,9 @@ class SettingsViewController: UIViewController {
             let current = UserDefaults.standard.integer(forKey: kAppearanceMode)
             return disclosureCell(title: L("settings.appearance"),
                                   subtitle: modes[current], icon: "circle.lefthalf.filled")
+        case .language:
+            return disclosureCell(title: L("settings.language"),
+                                  subtitle: currentLanguageDisplayName(), icon: "globe")
         case .clearLocalData:
             return actionCell(title: L("settings.privacy.clear_local"),
                               color: AppColor.danger, icon: "trash.fill")
@@ -239,6 +242,9 @@ class SettingsViewController: UIViewController {
         case .appearanceMode:
             showAppearancePicker()
 
+        case .language:
+            showLanguageGuide()
+
         case .clearAIHistory:
             confirmAction(title: L("settings.ai.clear_history"),
                           message: L("settings.ai.clear_history.confirm")) {
@@ -299,6 +305,34 @@ class SettingsViewController: UIViewController {
 
         default: break
         }
+    }
+
+    // MARK: - 当前语言显示名
+    private func currentLanguageDisplayName() -> String {
+        let code = Locale.preferredLanguages.first?.prefix(2) ?? "en"
+        switch code {
+        case "zh": return "简体中文"
+        case "de": return "Deutsch"
+        case "fr": return "Français"
+        default:   return "English"
+        }
+    }
+
+    // MARK: - 语言切换引导
+    private func showLanguageGuide() {
+        let current = currentLanguageDisplayName()
+        let alert = UIAlertController(
+            title: L("settings.language"),
+            message: String(format: L("settings.language.guide"), current),
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: L("settings.language.open_settings"), style: .default) { _ in
+            if let url = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(url)
+            }
+        })
+        alert.addAction(UIAlertAction(title: L("common.cancel"), style: .cancel))
+        present(alert, animated: true)
     }
 
     // MARK: - Appearance Picker
