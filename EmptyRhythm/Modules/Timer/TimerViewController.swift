@@ -66,6 +66,8 @@ class TimerViewController: UIViewController {
 
         // ScrollView
         scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.alwaysBounceVertical = true
         contentView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
@@ -208,8 +210,8 @@ class TimerViewController: UIViewController {
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            // 不设置 contentView.bottom = scrollView.bottom，让内容自动撑开高度
 
             // 状态卡片
             statusCard.topAnchor.constraint(equalTo: contentView.topAnchor, constant: AppUIStyle.paddingM),
@@ -255,7 +257,7 @@ class TimerViewController: UIViewController {
             statsCard.topAnchor.constraint(equalTo: buttonStack.bottomAnchor, constant: AppUIStyle.paddingL),
             statsCard.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: AppUIStyle.paddingM),
             statsCard.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -AppUIStyle.paddingM),
-            statsCard.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -AppUIStyle.paddingXL),
+            statsCard.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -100), // tabBar + 安全区域
 
             statsTitle.topAnchor.constraint(equalTo: statsCard.topAnchor, constant: AppUIStyle.paddingM),
             statsTitle.leadingAnchor.constraint(equalTo: statsCard.leadingAnchor, constant: AppUIStyle.paddingM),
