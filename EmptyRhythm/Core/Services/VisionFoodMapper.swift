@@ -224,8 +224,11 @@ struct VisionFoodMapper {
         let genericLabels = ["food", "fruit", "vegetable", "produce", "plant",
                              "natural object", "organism", "dish", "meal",
                              "ingredient", "cuisine", "snack", "drink", "beverage",
+                             "berry", "citrus", "tropical fruit", "stone fruit",
                              "document", "screenshot", "chart", "diagram", "text",
-                             "paper", "image", "photo", "picture"]
+                             "paper", "image", "photo", "picture",
+                             "people", "person", "adult", "human", "face",
+                             "indoor", "outdoor", "nature", "sky", "background"]
 
         let filtered = observations.filter { obs in
             obs.confidence > 0.05 &&
