@@ -126,7 +126,10 @@ struct VisionFoodMapper {
         ("mussel",          ["mussel"]),
         ("clam",            ["clam"]),
         ("scallop",         ["scallop"]),
-        ("fish",            ["cod", "salmon"]),
+        ("shellfish",       ["shrimp", "scallop", "clam", "mussel"]),
+        ("shellfish_prepared", ["shrimp", "scallop", "clam"]),
+        ("seafood",         ["shrimp", "salmon", "scallop"]),
+        ("crustacean",      ["shrimp", "lobster", "crab"]),
         ("egg",             ["egg_boiled", "egg_fried"]),
         ("omelette",        ["egg_scrambled"]),
         // 主食
@@ -227,12 +230,14 @@ struct VisionFoodMapper {
         let genericLabels: Set<String> = [
             "food", "fruit", "vegetable", "produce", "plant",
             "natural object", "organism", "dish", "meal",
-            "ingredient", "cuisine", "snack", "drink", "beverage",
+            "ingredient", "cuisine", "drink", "beverage",
             "berry", "citrus", "tropical fruit", "stone fruit",
             "document", "screenshot", "chart", "diagram", "text",
             "paper", "image", "photo", "picture",
             "people", "person", "adult", "human", "face",
-            "indoor", "outdoor", "nature", "sky", "background"
+            "indoor", "outdoor", "nature", "sky", "background",
+            "utensil", "tableware", "bowl", "plate", "cup",
+            "cutlery", "fork", "knife", "spoon", "chopstick"
         ]
 
         let filtered = observations.filter { obs in
