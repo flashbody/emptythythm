@@ -38,12 +38,40 @@ class FoodSearchViewController: UIViewController {
         addKeyboardDismissOnScroll(tableView)
     }
 
+    // MARK: - 餐次选择器（横向滚动 CollectionView，替代截断的 SegmentedControl）
+    private let mealTypeCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.minimumInteritemSpacing = 8
+        layout.sectionInset = UIEdgeInsets(top: 6, left: 16, bottom: 6, right: 16)
+        return UICollectionView(frame: .zero, collectionViewLayout: layout)
+    }()
+
     private func setupMealTypePicker() {
-        let items = MealType.allCases.map { $0.displayName }
-        let seg = UISegmentedControl(items: items)
-        seg.selectedSegmentIndex = 1
-        seg.addTarget(self, action: #selector(mealTypeChanged(_:)), for: .valueChanged)
-        navigationItem.titleView = seg
+        mealTypeCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        mealTypeCollectionView.delegate = self
+        mealTypeCollectionView.dataSource = self
+        mealTypeCollectionView.register(MealTypeCell.self, forCellWithReuseIdentifier: MealTypeCell.reuseID)
+        mealTypeCollectionView.backgroundColor = AppColor.bgCard
+        mealTypeCollectionView.showsHorizontalScrollIndicator = false
+        mealTypeCollectionView.tag = 999  // 区分 mealType 和 category
+        view.addSubview(mealTypeCollectionView)
+
+        NSLayoutConstraint.activate([
+            mealTypeCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            mealTypeCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mealTypeCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mealTypeCollectionView.heightAnchor.constraint(equalToConstant: 50),
+        ])
+
+        // 默认选中午餐
+        DispatchQueue.main.async {
+            self.mealTypeCollectionView.selectItem(
+                at: IndexPath(item: 1, section: 0),
+                animated: false, scrollPosition: .left
+            )
+        }
     }
 
     private func setupSearchController() {
@@ -61,10 +89,11 @@ class FoodSearchViewController: UIViewController {
         categoryCollectionView.register(CategoryCell.self, forCellWithReuseIdentifier: "CategoryCell")
         categoryCollectionView.backgroundColor = AppColor.bgPage
         categoryCollectionView.showsHorizontalScrollIndicator = false
+        categoryCollectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16) // 修复右边截断
         view.addSubview(categoryCollectionView)
 
         NSLayoutConstraint.activate([
-            categoryCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            categoryCollectionView.topAnchor.constraint(equalTo: mealTypeCollectionView.bottomAnchor),
             categoryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             categoryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             categoryCollectionView.heightAnchor.constraint(equalToConstant: 48),
@@ -99,9 +128,6 @@ class FoodSearchViewController: UIViewController {
         }
     }
 
-    @objc private func mealTypeChanged(_ seg: UISegmentedControl) {
-        selectedMealType = MealType.allCases[seg.selectedSegmentIndex]
-    }
 
     @objc private func dismiss_() { dismiss(animated: true) }
 }
@@ -166,11 +192,23 @@ extension FoodSearchViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension FoodSearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        FoodCategory.allCases.count + 1
+        if collectionView.tag == 999 {
+            return MealType.allCases.count
+        }
+        return FoodCategory.allCases.count + 1
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // 餐次选择器
+        if collectionView.tag == 999 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MealTypeCell.reuseID, for: indexPath) as! MealTypeCell
+            let meal = MealType.allCases[indexPath.item]
+            cell.configure(title: meal.displayName, isSelected: meal == selectedMealType)
+            return cell
+        }
+        // 分类选择器
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
         if indexPath.item == 0 {
             cell.configure(title: L("food.all"), isSelected: selectedCategory == nil)
@@ -182,6 +220,13 @@ extension FoodSearchViewController: UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // 餐次选择
+        if collectionView.tag == 999 {
+            selectedMealType = MealType.allCases[indexPath.item]
+            collectionView.reloadData()
+            return
+        }
+        // 分类选择
         if indexPath.item == 0 {
             selectedCategory = nil
             filteredFoods = Array(allFoods.prefix(50))
@@ -282,6 +327,35 @@ class CategoryCell: UICollectionViewCell {
             label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -6),
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
             label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
+        ])
+    }
+    required init?(coder: NSCoder) { fatalError() }
+
+    func configure(title: String, isSelected: Bool) {
+        label.text = title
+        contentView.backgroundColor = isSelected ? AppColor.mainTint : AppColor.bgSecondary
+        label.textColor = isSelected ? .white : AppColor.textMain
+    }
+}
+
+// MARK: - MealTypeCell（餐次选择器 Cell）
+class MealTypeCell: UICollectionViewCell {
+    static let reuseID = "MealTypeCell"
+    private let label = UILabel()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        label.font = UIFont.systemFont(ofSize: 13, weight: .medium)
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(label)
+        contentView.layer.cornerRadius = 16
+        contentView.layer.masksToBounds = true
+        NSLayoutConstraint.activate([
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 6),
+            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -6),
+            label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 14),
+            label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -14),
         ])
     }
     required init?(coder: NSCoder) { fatalError() }
