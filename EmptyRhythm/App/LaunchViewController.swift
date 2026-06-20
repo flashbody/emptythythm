@@ -198,7 +198,10 @@ final class LaunchViewController: UIViewController {
         taglineLabel.textColor     = lightGreen.withAlphaComponent(0.0)
         taglineLabel.textAlignment = .center
         taglineLabel.alpha         = 0
-        taglineLabel.letterSpacing = 2
+        taglineLabel.numberOfLines = 2                    // 允许换行保底
+        taglineLabel.adjustsFontSizeToFitWidth = true     // 单行时自动缩小
+        taglineLabel.minimumScaleFactor = 0.7
+        taglineLabel.letterSpacing = 1
         taglineLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(taglineLabel)
 
@@ -219,6 +222,8 @@ final class LaunchViewController: UIViewController {
             enLabel.topAnchor.constraint(equalTo: appNameLabel.bottomAnchor, constant: 6),
 
             taglineLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            taglineLabel.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 24),
+            taglineLabel.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -24),
             taglineLabel.topAnchor.constraint(equalTo: enLabel.bottomAnchor, constant: 20),
 
             lineView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
