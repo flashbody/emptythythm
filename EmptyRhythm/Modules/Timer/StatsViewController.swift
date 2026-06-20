@@ -457,7 +457,14 @@ class StatsViewController: UIViewController {
     }
 
     private func updateWeeklyReport() {
-        let weightChange = weightRecords.count >= 2 ? (weightRecords.last!.weight - weightRecords[max(0, weightRecords.count - 8)].weight) : 0
+        let weightChange: Double
+        if weightRecords.count >= 2,
+           let last = weightRecords.last {
+            let compareIdx = max(0, weightRecords.count - 8)
+            weightChange = last.weight - weightRecords[compareIdx].weight
+        } else {
+            weightChange = 0
+        }
         AIFastPlanEngine.shared.generateWeeklyReport(
             fastRecords: fastRecords,
             weightChange: weightChange
