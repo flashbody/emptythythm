@@ -413,6 +413,7 @@ class TimerViewController: UIViewController {
         vc.onPlanSelected = { [weak self] plan in
             self?.timerManager.startFasting(plan: plan)
             self?.updateUI()
+            self?.loadStatsData()
         }
         let nav = UINavigationController(rootViewController: vc)
         present(nav, animated: true)
@@ -426,9 +427,13 @@ class TimerViewController: UIViewController {
         )
         alert.addAction(UIAlertAction(title: L("timer.stop.complete"), style: .default) { [weak self] _ in
             self?.timerManager.completeFasting()
+            self?.updateUI()
+            self?.loadStatsData()
         })
         alert.addAction(UIAlertAction(title: L("timer.stop.interrupt"), style: .destructive) { [weak self] _ in
             self?.timerManager.interruptFasting()
+            self?.updateUI()
+            self?.loadStatsData()
         })
         alert.addAction(UIAlertAction(title: L("common.cancel"), style: .cancel))
         present(alert, animated: true)
