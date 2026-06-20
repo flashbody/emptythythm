@@ -50,6 +50,7 @@ class SettingsViewController: UIViewController {
     ]
 
     private let tableView = UITableView(frame: .zero, style: .insetGrouped)
+    private var isProcessingIAP = false   // 防止 IAP 重复点击
 
     // MARK: - UserDefaults Keys
     private let kNotifyFastStart    = "er_notify_fast_start"
@@ -266,8 +267,10 @@ class SettingsViewController: UIViewController {
             }
 
         case .upgradePro:
-            guard !IAPManager.shared.isProUnlocked else { return }
+            guard !IAPManager.shared.isProUnlocked, !isProcessingIAP else { return }
+            isProcessingIAP = true
             Task { @MainActor in
+                defer { self.isProcessingIAP = false }
                 do {
                     try await IAPManager.shared.purchase()
                     self.tableView.reloadData()
@@ -279,7 +282,10 @@ class SettingsViewController: UIViewController {
             }
 
         case .restorePurchase:
+            guard !isProcessingIAP else { return }
+            isProcessingIAP = true
             Task { @MainActor in
+                defer { self.isProcessingIAP = false }
                 do {
                     try await IAPManager.shared.restore()
                     self.tableView.reloadData()

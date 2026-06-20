@@ -330,6 +330,12 @@ class TimerViewController: UIViewController {
 
     // MARK: - 按钮事件
     @objc private func startTapped() {
+        // 防重复点击：已在断食中直接返回
+        guard timerManager.state == .idle || timerManager.state == .completed || timerManager.state == .interrupted else { return }
+        startButton.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            self?.startButton.isEnabled = true
+        }
         // 检查是否有用户档案
         guard UserProfileService.shared.hasProfile else {
             let vc = ProfileSetupViewController()

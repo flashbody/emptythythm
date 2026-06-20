@@ -16,6 +16,7 @@ class StatsViewController: UIViewController {
     private let predictionTitle = UILabel()
     private let predictionContent = UILabel()
     private let fastingStatsCard = UIView()
+    private var isShowingWeightAlert = false   // 防止重复弹出体重输入框
     private let weeklyReportCard = UIView()
     private let weeklyReportContent = UILabel()
 
@@ -331,6 +332,8 @@ class StatsViewController: UIViewController {
 
     // MARK: - Add Weight
     @objc private func addWeight() {
+        guard !isShowingWeightAlert else { return }
+        isShowingWeightAlert = true
         let alert = UIAlertController(
             title: L("stats.log_weight"),
             message: nil,
@@ -343,8 +346,11 @@ class StatsViewController: UIViewController {
                 tf.text = String(format: "%.1f", latest.weight)
             }
         }
-        alert.addAction(UIAlertAction(title: L("common.cancel"), style: .cancel))
+        alert.addAction(UIAlertAction(title: L("common.cancel"), style: .cancel) { [weak self] _ in
+            self?.isShowingWeightAlert = false
+        })
         alert.addAction(UIAlertAction(title: L("common.save"), style: .default) { [weak self] _ in
+            self?.isShowingWeightAlert = false
             guard let text = alert.textFields?.first?.text,
                   let weight = Double(text), weight > 0 else { return }
             self?.saveWeight(weight)

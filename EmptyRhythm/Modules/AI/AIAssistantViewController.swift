@@ -189,17 +189,20 @@ class AIAssistantViewController: UIViewController {
     }
 
     @objc private func quickQuestionTapped(_ sender: UIButton) {
+        guard !isLoading else { return }
         let question = L(quickQuestions[sender.tag])
         sendUserMessage(question)
     }
 
     @objc private func sendMessage() {
-        guard let text = inputField.text, !text.isEmpty else { return }
+        guard let text = inputField.text, !text.isEmpty, !isLoading else { return }
         inputField.text = ""
+        sendButton.isEnabled = false
         sendUserMessage(text)
     }
 
     private func sendUserMessage(_ text: String) {
+        isLoading = true
         messages.append((isUser: true, content: text))
         tableView.reloadData()
         scrollToBottom()
@@ -218,6 +221,9 @@ class AIAssistantViewController: UIViewController {
                 self.tableView.reloadData()
                 self.scrollToBottom()
                 self.saveToHistory(user: text, ai: response)
+                // 恢复发送按钮
+                self.isLoading = false
+                self.sendButton.isEnabled = true
             }
         }
     }

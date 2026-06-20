@@ -183,6 +183,23 @@ struct AppearanceManager {
     }
 }
 
+// MARK: - UIButton 防抖扩展
+private var throttleKey: UInt8 = 0
+extension UIButton {
+    /// 防抖点击：interval 秒内只响应一次，适用于所有普通按钮
+    func addThrottledTarget(_ target: Any?, action: Selector, interval: TimeInterval = 0.8) {
+        addTarget(target, action: action, for: .touchUpInside)
+        addTarget(self, action: #selector(throttleStart), for: .touchUpInside)
+    }
+
+    @objc private func throttleStart() {
+        isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
+            self?.isEnabled = true
+        }
+    }
+}
+
 // MARK: - UIViewController 通用扩展
 extension UIViewController {
 

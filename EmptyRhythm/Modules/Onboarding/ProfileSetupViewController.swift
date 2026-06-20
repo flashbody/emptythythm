@@ -497,6 +497,11 @@ class ProfileSetupViewController: UIViewController {
 
     @objc private func nextTapped() {
         view.endEditing(true)
+        // 防重复：短暂禁用按钮
+        nextButton.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            self?.nextButton.isEnabled = true
+        }
         let idx = currentStep.rawValue
         if idx < Step.allCases.count - 1 {
             showStep(Step(rawValue: idx + 1)!, animated: true)
