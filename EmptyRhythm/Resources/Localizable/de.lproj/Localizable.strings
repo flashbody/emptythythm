@@ -276,3 +276,6 @@
 "profile.years_old" = "Jahre";
 "profile.goal.already_reached" = "Sie haben Ihr Zielgewicht bereits erreicht! Wir helfen Ihnen, es zu halten.";
 "profile.goal.prediction" = "Sie müssen %.1f kg abnehmen. Voraussichtlich %d Wochen mit konsequentem Fasten.";
+
+/* Launch Screen */
+"launch.tagline" = "Rhythmus des Fastens · Begegne einem besseren Du";

@@ -276,3 +276,9 @@
 "settings.language" = "Language";
 "settings.language.guide" = "Current language: %@\n\nTo change the language, go to iPhone Settings → EmptyRhythm → Language.";
 "settings.language.open_settings" = "Open Settings";
+
+/* Launch Screen */
+"launch.tagline" = "Rhythm of fasting · Meet a better you";
+
+/* Launch Screen */
+"launch.tagline" = "Rhythm of fasting · Meet a better you";

@@ -276,3 +276,6 @@
 "profile.years_old" = "ans";
 "profile.goal.already_reached" = "Vous avez déjà atteint votre poids cible ! Nous vous aidons à le maintenir.";
 "profile.goal.prediction" = "Vous devez perdre %.1f kg. Environ %d semaines avec un jeûne régulier.";
+
+/* Launch Screen */
+"launch.tagline" = "Rythme du jeûne · Rencontre un meilleur toi";

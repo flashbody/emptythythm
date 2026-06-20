@@ -276,3 +276,6 @@
 "settings.language" = "语言";
 "settings.language.guide" = "当前语言：%@\n\n如需切换语言，请前往 iPhone 设置 → 空律 → 语言。";
 "settings.language.open_settings" = "打开设置";
+
+/* Launch Screen */
+"launch.tagline" = "规律轻断食 · 遇见更好的自己";

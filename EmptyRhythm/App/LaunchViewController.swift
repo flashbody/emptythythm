@@ -14,6 +14,11 @@ final class LaunchViewController: UIViewController {
     private let taglineLabel    = UILabel()
     private let dotStack        = UIStackView()
 
+    // MARK: - 系统语言（用于品牌名双语切换）
+    private let systemLang: String = {
+        String(Locale.preferredLanguages.first?.prefix(2) ?? "en")
+    }()
+
     // MARK: - Colors
     private let brandGreen   = UIColor(red: 0.298, green: 0.788, blue: 0.600, alpha: 1)  // #4CC999
     private let deepGreen    = UIColor(red: 0.082, green: 0.420, blue: 0.290, alpha: 1)  // #155A4A
@@ -163,8 +168,10 @@ final class LaunchViewController: UIViewController {
             view.layer.addSublayer(dot)
         }
 
-        // ── App 名称 ──────────────────────────────────────────────────────────
-        appNameLabel.text          = "空律"
+        // ── App 名称（双语品牌标识）────────────────────────────────────────────
+        // 中文系统显示「空律」，其他语言显示「EmptyRhythm」
+        let appNameText = systemLang == "zh" ? "空律" : "EmptyRhythm"
+        appNameLabel.text          = appNameText
         appNameLabel.font          = UIFont.systemFont(ofSize: 42, weight: .thin)
         appNameLabel.textColor     = pureWhite
         appNameLabel.textAlignment = .center
@@ -172,9 +179,11 @@ final class LaunchViewController: UIViewController {
         appNameLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(appNameLabel)
 
-        // ── 英文副标题 ────────────────────────────────────────────────────────
+        // ── 英文副标题（品牌名，固定英文）────────────────────────────────────
+        // 中文系统额外显示英文品牌名，其他语言不重复显示
         let enLabel = UILabel()
-        enLabel.text          = "EmptyRhythm"
+        enLabel.text          = systemLang == "zh" ? "EmptyRhythm" : ""
+        enLabel.isHidden      = systemLang != "zh"
         enLabel.font          = UIFont.systemFont(ofSize: 14, weight: .light)
         enLabel.textColor     = pureWhite.withAlphaComponent(0.6)
         enLabel.textAlignment = .center
@@ -183,8 +192,8 @@ final class LaunchViewController: UIViewController {
         enLabel.tag = 101
         view.addSubview(enLabel)
 
-        // ── Tagline ───────────────────────────────────────────────────────────
-        taglineLabel.text          = "规律轻断食  遇见更好的自己"
+        // ── Tagline（多语言）─────────────────────────────────────────────────
+        taglineLabel.text          = L("launch.tagline")
         taglineLabel.font          = UIFont.systemFont(ofSize: 13, weight: .ultraLight)
         taglineLabel.textColor     = lightGreen.withAlphaComponent(0.0)
         taglineLabel.textAlignment = .center
