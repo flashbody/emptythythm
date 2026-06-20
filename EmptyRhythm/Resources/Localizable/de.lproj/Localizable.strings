@@ -147,3 +147,132 @@
 "settings.language" = "Sprache";
 "settings.language.guide" = "Aktuelle Sprache: %@\n\nUm die Sprache zu ändern, gehen Sie zu iPhone-Einstellungen → EmptyRhythm → Sprache.";
 "settings.language.open_settings" = "Einstellungen öffnen";
+
+/* Record */
+"record.today" = "Heute";
+"record.yesterday" = "Gestern";
+"record.remaining_cal" = "%d kcal verbleibend";
+"record.over_cal" = "%d kcal überschritten";
+"meal.breakfast" = "Frühstück";
+"meal.lunch" = "Mittagessen";
+"meal.dinner" = "Abendessen";
+"meal.snack" = "Snack";
+"meal.drink" = "Getränk";
+"meal.late_night" = "Spätmahlzeit";
+
+/* Food Search */
+"food.search.title" = "Lebensmittel hinzufügen";
+"food.search.placeholder" = "Lebensmittel suchen...";
+"food.all" = "Alle";
+"food.enter_weight" = "Menge eingeben (Gramm)";
+"common.add" = "Hinzufügen";
+"common.confirm" = "Bestätigen";
+
+/* Camera */
+"camera.title" = "Foto-Erkennung";
+"camera.take_photo" = "Foto aufnehmen / Aus Bibliothek wählen";
+"camera.analyze" = "Lebensmittel analysieren";
+"camera.candidates" = "Bitte richtiges Lebensmittel auswählen:";
+"camera.disclaimer" = "KI-Erkennung ist nur ein Richtwert. Genauigkeit ca. 60-70%. Bitte vor dem Hinzufügen bestätigen.";
+"camera.unavailable.title" = "Kamera nicht verfügbar";
+"camera.unavailable.message" = "Kamerazugriff nicht möglich. Sie können Lebensmittel manuell suchen.";
+
+/* Stats */
+"stats.log_weight" = "Gewicht erfassen";
+"stats.no_weight_data" = "Noch keine Gewichtsdaten";
+"stats.no_chart_data" = "Gewicht erfassen, um Diagramm anzuzeigen";
+"stats.prediction_title" = "Zielvorhersage";
+"stats.prediction_no_data" = "Gewicht erfassen und Ziel setzen, um Vorhersagen zu sehen.";
+"stats.prediction_reached" = "Glückwunsch! Sie haben Ihr Zielgewicht erreicht!";
+"stats.prediction_text" = "Sie müssen %.1f kg abnehmen. Voraussichtlich %d Wochen bis zum Ziel am %@. Tägliches Kaloriendefizit: %d kcal.";
+"stats.weekly_report" = "KI-Wochenbericht";
+"stats.success_rate" = "Erfolgsquote";
+"stats.avg_fast" = "Ø Fasten";
+
+/* AI */
+"ai.disclaimer" = "KI-Inhalte dienen nur als Referenz, keine medizinische Beratung. Bei gesundheitlichen Fragen wenden Sie sich an einen Arzt.";
+"ai.welcome" = "Hallo! Ich bin Ihr Fasten-Assistent. Fragen Sie mich jederzeit zu Intervallfasten, Ernährung oder Ihren Gesundheitszielen.";
+"ai.input.placeholder" = "Fragen Sie mich...";
+"quick.q1" = "Was darf ich beim Fasten trinken?";
+"quick.q2" = "Mir ist schwindelig, was soll ich tun?";
+"quick.q3" = "Welcher Plan passt am besten zu mir?";
+"quick.q4" = "Wie viele Kalorien sollte ich essen?";
+"quick.q5" = "Tipps für Anfänger";
+"quick.q6" = "Kann ich beim Fasten Sport treiben?";
+"ai.response.drinks" = "Beim Fasten erlaubt: Wasser, schwarzer Kaffee (ohne Zucker/Milch), reiner Tee, Sprudelwasser. Verboten: Saft, Milch, Softdrinks oder kalorienhaltige Getränke.";
+"ai.response.dizzy" = "Schwindel beim Fasten ist besonders in der ersten Woche normal. Tipp: mehr Wasser trinken, etwas Salz oder Elektrolyte zu sich nehmen. Bei anhaltenden Symptomen bitte einen Arzt aufsuchen.";
+"ai.response.hunger" = "Hunger beim Fasten ist normal. Tipps: Wasser oder schwarzen Kaffee trinken, beschäftigt bleiben. Das Hungergefühl vergeht meist nach 20 Minuten.";
+"ai.response.plan" = "Basierend auf Ihrem Profil empfehle ich den %@-Plan (%d Stunden Fasten, %d Stunden Essensfenster).";
+"ai.response.plan_no_profile" = "Bitte vervollständigen Sie zuerst Ihr Gesundheitsprofil für eine persönliche Fastenempfehlung.";
+"ai.response.calorie" = "Basierend auf Ihrem Profil: tägliches Kalorienziel %d kcal, Kaloriendefizit %d kcal.";
+"ai.response.calorie_no_profile" = "Bitte vervollständigen Sie Ihr Profil für persönliche Kalorienempfehlungen.";
+"ai.response.weight" = "Gewichtsverlust beim Fasten: mit konsequentem Fasten und Kalorienkontrolle 0,5-1 kg/Woche. Erste Woche mehr durch Wasserverlust. Wochendurchschnitt beachten.";
+"ai.response.exercise" = "Leichter bis mittlerer Sport beim Fasten ist in Ordnung. Beste Zeit: Ende der Fastenzeit oder im Essensfenster. Intensives Training auf nüchternen Magen vermeiden.";
+"ai.response.period" = "Während der Menstruation Fastenintensität reduzieren (12:12 oder 14:10). Ernährung und Ruhe priorisieren. Manche Frauen fasten während der Periode nicht – auf den Körper hören.";
+"ai.response.beginner" = "Mit 12:12 beginnen (12h fasten, 12h essen) für 1-2 Wochen. Dann auf 14:10, dann 16:8 steigern. Gewohnheit aufbauen ist wichtiger als Intensität. Viel Wasser trinken!";
+"ai.response.default" = "Gute Frage zum Fasten! Grundprinzipien: hydriert bleiben, sanft aus dem Fasten kommen, auf den Körper hören, konsequent bleiben. Fragen Sie nach Getränken, Hunger, Sport oder Ihrem persönlichen Plan.";
+
+/* Settings */
+"settings.section.profile" = "Profil";
+"settings.section.notifications" = "Benachrichtigungen";
+"settings.section.ai" = "KI-Assistent";
+"settings.section.appearance" = "Darstellung";
+"settings.section.privacy" = "Datenschutz & Daten";
+"settings.section.iap" = "Pro-Upgrade";
+"settings.section.about" = "Über";
+"settings.edit_profile" = "Profil bearbeiten";
+"settings.profile.not_set" = "Noch nicht eingestellt";
+"settings.notify.fast_start" = "Fastenbeginn-Erinnerung";
+"settings.notify.eat_window" = "Essensfenster geöffnet";
+"settings.notify.eat_close" = "Essensfenster schließt (30 Min.)";
+"settings.notify.daily_progress" = "Täglicher Fortschritt (21 Uhr)";
+"settings.ai.enabled" = "KI-Funktionen aktiviert";
+"settings.ai.weekly_report" = "Automatischer Wochenbericht";
+"settings.ai.clear_history" = "KI-Chatverlauf löschen";
+"settings.ai.clear_history.confirm" = "Alle KI-Chataufzeichnungen werden gelöscht. Dies kann nicht rückgängig gemacht werden.";
+"settings.ai.cleared" = "KI-Chatverlauf gelöscht.";
+"settings.appearance" = "Design";
+"settings.appearance.system" = "System folgen";
+"settings.appearance.light" = "Hellmodus";
+"settings.appearance.dark" = "Dunkelmodus";
+"settings.privacy.clear_local" = "Alle lokalen Daten löschen";
+"settings.privacy.clear_local.confirm" = "Alle lokalen Daten inkl. Gewicht, Ernährung und Profil werden gelöscht. Nicht rückgängig machbar.";
+"settings.privacy.clear_cloud" = "iCloud-Synchronisierungsdaten löschen";
+"settings.privacy.clear_cloud.confirm" = "Mit iCloud synchronisierte Fastendaten werden gelöscht. Nicht rückgängig machbar.";
+"settings.privacy.cleared" = "Lokale Daten gelöscht.";
+"settings.privacy.cloud_cleared" = "iCloud-Daten gelöscht.";
+"settings.iap.upgrade" = "Auf Pro upgraden — 3,99 €";
+"settings.iap.restore" = "Kauf wiederherstellen";
+"settings.iap.pro_unlocked" = "Pro freigeschaltet ✓";
+"settings.iap.success" = "Vielen Dank!";
+"settings.iap.success.msg" = "Pro-Funktionen sind jetzt freigeschaltet.";
+"settings.iap.restored" = "Wiederhergestellt";
+"settings.iap.restored.msg" = "Ihr Pro-Kauf wurde wiederhergestellt.";
+"settings.about.version" = "Version";
+"settings.about.privacy" = "Datenschutzrichtlinie";
+"settings.about.terms" = "Nutzungsbedingungen";
+"settings.about.rate" = "EmptyRhythm bewerten";
+"settings.about.contact" = "Support kontaktieren";
+
+/* Profile Setup */
+"profile.setup.title" = "Profil einrichten";
+"profile.step.gender.title" = "Ihr Geschlecht?";
+"profile.step.gender.subtitle" = "Wir personalisieren Ihren Fastenplan basierend auf Ihrer Physiologie.";
+"profile.step.age.title" = "Wie alt sind Sie?";
+"profile.step.age.subtitle" = "Das Alter beeinflusst Ihren Stoffwechsel und die empfohlene Fastenintensität.";
+"profile.step.body.title" = "Ihr aktueller Körper";
+"profile.step.body.subtitle" = "Geben Sie Größe und Gewicht ein, um BMI und Kalorienziele zu berechnen.";
+"profile.step.goal.title" = "Ihr Ziel?";
+"profile.step.goal.subtitle" = "Setzen Sie Ihr Zielgewicht und wir berechnen Ihren Zeitplan.";
+"profile.step.lifestyle.title" = "Ihr Lebensstil";
+"profile.step.lifestyle.subtitle" = "Helfen Sie uns, Ihren Fastenplan an Ihren Alltag anzupassen.";
+"profile.height" = "Größe";
+"profile.weight" = "Aktuelles Gewicht";
+"profile.target_weight" = "Zielgewicht";
+"profile.sport_level" = "Aktivitätslevel";
+"profile.work_rest" = "Schlafrhythmus";
+"profile.gastro_sensitive" = "Empfindlicher Magen";
+"profile.period_sensitive" = "Periodenbeschwerden (Frauen)";
+"profile.years_old" = "Jahre";
+"profile.goal.already_reached" = "Sie haben Ihr Zielgewicht bereits erreicht! Wir helfen Ihnen, es zu halten.";
+"profile.goal.prediction" = "Sie müssen %.1f kg abnehmen. Voraussichtlich %d Wochen mit konsequentem Fasten.";

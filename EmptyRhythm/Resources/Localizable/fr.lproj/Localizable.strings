@@ -147,3 +147,132 @@
 "settings.language" = "Langue";
 "settings.language.guide" = "Langue actuelle : %@\n\nPour changer la langue, allez dans Réglages iPhone → EmptyRhythm → Langue.";
 "settings.language.open_settings" = "Ouvrir les réglages";
+
+/* Record */
+"record.today" = "Aujourd'hui";
+"record.yesterday" = "Hier";
+"record.remaining_cal" = "%d kcal restantes";
+"record.over_cal" = "%d kcal dépassées";
+"meal.breakfast" = "Petit-déjeuner";
+"meal.lunch" = "Déjeuner";
+"meal.dinner" = "Dîner";
+"meal.snack" = "Collation";
+"meal.drink" = "Boisson";
+"meal.late_night" = "Repas tardif";
+
+/* Food Search */
+"food.search.title" = "Ajouter un aliment";
+"food.search.placeholder" = "Rechercher un aliment...";
+"food.all" = "Tout";
+"food.enter_weight" = "Entrer la quantité (grammes)";
+"common.add" = "Ajouter";
+"common.confirm" = "Confirmer";
+
+/* Camera */
+"camera.title" = "Reconnaissance photo";
+"camera.take_photo" = "Prendre une photo / Choisir dans la bibliothèque";
+"camera.analyze" = "Analyser l'aliment";
+"camera.candidates" = "Sélectionnez le bon aliment :";
+"camera.disclaimer" = "La reconnaissance IA est indicative. Précision ~60-70%. Veuillez confirmer avant d'ajouter.";
+"camera.unavailable.title" = "Caméra indisponible";
+"camera.unavailable.message" = "Accès à la caméra impossible. Vous pouvez rechercher des aliments manuellement.";
+
+/* Stats */
+"stats.log_weight" = "Enregistrer le poids";
+"stats.no_weight_data" = "Aucune donnée de poids";
+"stats.no_chart_data" = "Enregistrez votre poids pour voir le graphique";
+"stats.prediction_title" = "Prédiction d'objectif";
+"stats.prediction_no_data" = "Enregistrez votre poids et définissez un objectif pour voir les prédictions.";
+"stats.prediction_reached" = "Félicitations ! Vous avez atteint votre poids cible !";
+"stats.prediction_text" = "Vous devez perdre %.1f kg. Environ %d semaines pour atteindre votre objectif le %@. Déficit calorique quotidien : %d kcal.";
+"stats.weekly_report" = "Rapport IA hebdomadaire";
+"stats.success_rate" = "Taux de réussite";
+"stats.avg_fast" = "Jeûne moy.";
+
+/* AI */
+"ai.disclaimer" = "Le contenu IA est indicatif uniquement, pas un avis médical. Consultez votre médecin pour des problèmes de santé.";
+"ai.welcome" = "Bonjour ! Je suis votre assistant jeûne. Posez-moi vos questions sur le jeûne intermittent, la nutrition ou vos objectifs santé.";
+"ai.input.placeholder" = "Posez-moi une question...";
+"quick.q1" = "Que puis-je boire pendant le jeûne ?";
+"quick.q2" = "J'ai des vertiges, que faire ?";
+"quick.q3" = "Quel plan me convient le mieux ?";
+"quick.q4" = "Combien de calories devrais-je manger ?";
+"quick.q5" = "Conseils pour débutants";
+"quick.q6" = "Puis-je faire du sport en jeûnant ?";
+"ai.response.drinks" = "Pendant le jeûne : eau, café noir (sans sucre/lait), thé nature, eau gazeuse. Évitez : jus, lait, sodas ou toute boisson calorique.";
+"ai.response.dizzy" = "Les vertiges lors du jeûne sont courants, surtout la première semaine. Conseil : boire plus d'eau, ajouter une pincée de sel ou des électrolytes. Si persistant, consultez un médecin.";
+"ai.response.hunger" = "La faim pendant le jeûne est normale. Astuces : boire de l'eau ou du café noir, rester occupé. La sensation de faim passe généralement en 20 minutes.";
+"ai.response.plan" = "Selon votre profil, je recommande le plan %@ (%d heures de jeûne, %d heures de fenêtre alimentaire).";
+"ai.response.plan_no_profile" = "Veuillez d'abord compléter votre profil de santé pour une recommandation personnalisée.";
+"ai.response.calorie" = "Selon votre profil : objectif calorique quotidien %d kcal, déficit %d kcal.";
+"ai.response.calorie_no_profile" = "Veuillez compléter votre profil pour des recommandations caloriques personnalisées.";
+"ai.response.weight" = "Perte de poids avec le jeûne : 0,5-1 kg/semaine avec jeûne régulier + contrôle calorique. La première semaine peut être plus importante (eau). Suivez les moyennes hebdomadaires.";
+"ai.response.exercise" = "L'exercice léger à modéré pendant le jeûne est acceptable. Meilleur moment : fin du jeûne ou pendant la fenêtre alimentaire. Évitez l'entraînement intense à jeun.";
+"ai.response.period" = "Pendant les règles, réduisez l'intensité du jeûne (12:12 ou 14:10). Priorisez la nutrition et le repos. Certaines femmes préfèrent ne pas jeûner – écoutez votre corps.";
+"ai.response.beginner" = "Commencez par 12:12 (12h jeûne, 12h alimentation) pendant 1-2 semaines. Puis passez à 14:10, ensuite 16:8. Construire l'habitude est plus important que l'intensité. Buvez beaucoup d'eau !";
+"ai.response.default" = "Bonne question sur le jeûne ! Principes clés : rester hydraté, rompre le jeûne doucement, écouter son corps, être régulier. Demandez-moi sur les boissons, la faim, le sport ou votre plan personnalisé.";
+
+/* Settings */
+"settings.section.profile" = "Profil";
+"settings.section.notifications" = "Notifications";
+"settings.section.ai" = "Assistant IA";
+"settings.section.appearance" = "Apparence";
+"settings.section.privacy" = "Confidentialité et données";
+"settings.section.iap" = "Mise à niveau Pro";
+"settings.section.about" = "À propos";
+"settings.edit_profile" = "Modifier le profil";
+"settings.profile.not_set" = "Pas encore configuré";
+"settings.notify.fast_start" = "Rappel début de jeûne";
+"settings.notify.eat_window" = "Fenêtre alimentaire ouverte";
+"settings.notify.eat_close" = "Fermeture fenêtre (30 min)";
+"settings.notify.daily_progress" = "Bilan quotidien (21h)";
+"settings.ai.enabled" = "Fonctionnalités IA activées";
+"settings.ai.weekly_report" = "Rapport hebdomadaire auto";
+"settings.ai.clear_history" = "Effacer l'historique IA";
+"settings.ai.clear_history.confirm" = "Tous les enregistrements de chat IA seront supprimés. Cette action est irréversible.";
+"settings.ai.cleared" = "Historique IA effacé.";
+"settings.appearance" = "Thème";
+"settings.appearance.system" = "Suivre le système";
+"settings.appearance.light" = "Mode clair";
+"settings.appearance.dark" = "Mode sombre";
+"settings.privacy.clear_local" = "Effacer toutes les données locales";
+"settings.privacy.clear_local.confirm" = "Toutes les données locales (poids, alimentation, profil) seront supprimées. Irréversible.";
+"settings.privacy.clear_cloud" = "Effacer les données iCloud";
+"settings.privacy.clear_cloud.confirm" = "Les données de jeûne synchronisées avec iCloud seront supprimées. Irréversible.";
+"settings.privacy.cleared" = "Données locales effacées.";
+"settings.privacy.cloud_cleared" = "Données iCloud effacées.";
+"settings.iap.upgrade" = "Passer à Pro — 3,99 €";
+"settings.iap.restore" = "Restaurer l'achat";
+"settings.iap.pro_unlocked" = "Pro débloqué ✓";
+"settings.iap.success" = "Merci !";
+"settings.iap.success.msg" = "Les fonctionnalités Pro sont maintenant débloquées.";
+"settings.iap.restored" = "Restauré";
+"settings.iap.restored.msg" = "Votre achat Pro a été restauré.";
+"settings.about.version" = "Version";
+"settings.about.privacy" = "Politique de confidentialité";
+"settings.about.terms" = "Conditions d'utilisation";
+"settings.about.rate" = "Noter EmptyRhythm";
+"settings.about.contact" = "Contacter le support";
+
+/* Profile Setup */
+"profile.setup.title" = "Configurer le profil";
+"profile.step.gender.title" = "Votre genre ?";
+"profile.step.gender.subtitle" = "Nous personnalisons votre plan de jeûne selon votre physiologie.";
+"profile.step.age.title" = "Quel âge avez-vous ?";
+"profile.step.age.subtitle" = "L'âge influence votre métabolisme et l'intensité de jeûne recommandée.";
+"profile.step.body.title" = "Votre corps actuel";
+"profile.step.body.subtitle" = "Entrez taille et poids pour calculer l'IMC et les objectifs caloriques.";
+"profile.step.goal.title" = "Votre objectif ?";
+"profile.step.goal.subtitle" = "Définissez votre poids cible et nous prédisons votre calendrier.";
+"profile.step.lifestyle.title" = "Votre style de vie";
+"profile.step.lifestyle.subtitle" = "Aidez-nous à adapter votre plan de jeûne à votre routine.";
+"profile.height" = "Taille";
+"profile.weight" = "Poids actuel";
+"profile.target_weight" = "Poids cible";
+"profile.sport_level" = "Niveau d'activité";
+"profile.work_rest" = "Rythme de sommeil";
+"profile.gastro_sensitive" = "Estomac sensible";
+"profile.period_sensitive" = "Inconforts menstruels (Femmes)";
+"profile.years_old" = "ans";
+"profile.goal.already_reached" = "Vous avez déjà atteint votre poids cible ! Nous vous aidons à le maintenir.";
+"profile.goal.prediction" = "Vous devez perdre %.1f kg. Environ %d semaines avec un jeûne régulier.";
