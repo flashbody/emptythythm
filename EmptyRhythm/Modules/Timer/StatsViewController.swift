@@ -1,5 +1,6 @@
 import UIKit
 import CoreData
+import HealthKit
 
 // MARK: - 体重追踪 + 周期预测（Tab: Stats）
 class StatsViewController: UIViewController {
@@ -16,9 +17,16 @@ class StatsViewController: UIViewController {
     private let predictionTitle = UILabel()
     private let predictionContent = UILabel()
     private let fastingStatsCard = UIView()
-    private var isShowingWeightAlert = false   // 防止重复弹出体重输入框
+    private var isShowingWeightAlert = false
     private let weeklyReportCard = UIView()
     private let weeklyReportContent = UILabel()
+
+    // HealthKit 卡片
+    private let healthCard = UIView()
+    private let stepsValueLabel = UILabel()
+    private let calorieValueLabel = UILabel()
+    private let heartRateValueLabel = UILabel()
+    private let healthWarningLabel = UILabel()
 
     // MARK: - Data
     private var weightRecords: [WeightRecord] = []
@@ -42,6 +50,31 @@ class StatsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadData()
+        syncHealthKit()
+    }
+
+    // MARK: - HealthKit 同步
+    private func syncHealthKit() {
+        guard HealthKitService.shared.isAvailable else { return }
+        HealthKitService.shared.requestAuthorization { [weak self] granted in
+            guard granted else { return }
+            HealthKitService.shared.syncTodayData { [weak self] data in
+                self?.updateHealthCard(data: data)
+            }
+        }
+    }
+
+    private func updateHealthCard(data: HealthDayData) {
+        stepsValueLabel.text = "\(data.stepCount)"
+        calorieValueLabel.text = "\(Int(data.activeCalorie))"
+        heartRateValueLabel.text = data.restHeartRate > 0 ? "\(data.restHeartRate)" : "--"
+
+        if let warning = data.warningDesc {
+            healthWarningLabel.text = "⚠️ \(warning)"
+            healthWarningLabel.isHidden = false
+        } else {
+            healthWarningLabel.isHidden = true
+        }
     }
 
     // MARK: - Setup
@@ -135,6 +168,105 @@ class StatsViewController: UIViewController {
             weeklyReportContent.trailingAnchor.constraint(equalTo: weeklyReportCard.trailingAnchor, constant: -AppUIStyle.paddingM),
             weeklyReportContent.bottomAnchor.constraint(equalTo: weeklyReportCard.bottomAnchor, constant: -AppUIStyle.paddingM),
         ])
+
+        // HealthKit 卡片
+        setupHealthCard()
+    }
+
+    private func setupHealthCard() {
+        healthCard.setCardStyle()
+        healthCard.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(healthCard)
+
+        let titleLabel = UILabel()
+        titleLabel.setSubTitleStyle()
+        titleLabel.text = "Apple Health"
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        let heartIcon = UIImageView(image: UIImage(systemName: "heart.fill"))
+        heartIcon.tintColor = .systemRed
+        heartIcon.translatesAutoresizingMaskIntoConstraints = false
+
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.distribution = .fillEqually
+        stack.translatesAutoresizingMaskIntoConstraints = false
+
+        let stepsItem  = makeHealthItem(valueLabel: stepsValueLabel,     title: "👟", subtitle: "步数",   color: AppColor.mainTint)
+        let calItem    = makeHealthItem(valueLabel: calorieValueLabel,    title: "🔥", subtitle: "千卡",   color: AppColor.warningOrange)
+        let heartItem  = makeHealthItem(valueLabel: heartRateValueLabel,  title: "❤️", subtitle: "心率",   color: .systemRed)
+
+        stack.addArrangedSubview(stepsItem)
+        stack.addArrangedSubview(calItem)
+        stack.addArrangedSubview(heartItem)
+
+        healthWarningLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        healthWarningLabel.textColor = AppColor.warningOrange
+        healthWarningLabel.numberOfLines = 0
+        healthWarningLabel.isHidden = true
+        healthWarningLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        healthCard.addSubview(heartIcon)
+        healthCard.addSubview(titleLabel)
+        healthCard.addSubview(stack)
+        healthCard.addSubview(healthWarningLabel)
+
+        NSLayoutConstraint.activate([
+            heartIcon.topAnchor.constraint(equalTo: healthCard.topAnchor, constant: AppUIStyle.paddingM),
+            heartIcon.leadingAnchor.constraint(equalTo: healthCard.leadingAnchor, constant: AppUIStyle.paddingM),
+            heartIcon.widthAnchor.constraint(equalToConstant: 18),
+            heartIcon.heightAnchor.constraint(equalToConstant: 18),
+            titleLabel.centerYAnchor.constraint(equalTo: heartIcon.centerYAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: heartIcon.trailingAnchor, constant: 6),
+            stack.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
+            stack.leadingAnchor.constraint(equalTo: healthCard.leadingAnchor, constant: AppUIStyle.paddingS),
+            stack.trailingAnchor.constraint(equalTo: healthCard.trailingAnchor, constant: -AppUIStyle.paddingS),
+            healthWarningLabel.topAnchor.constraint(equalTo: stack.bottomAnchor, constant: 8),
+            healthWarningLabel.leadingAnchor.constraint(equalTo: healthCard.leadingAnchor, constant: AppUIStyle.paddingM),
+            healthWarningLabel.trailingAnchor.constraint(equalTo: healthCard.trailingAnchor, constant: -AppUIStyle.paddingM),
+            healthWarningLabel.bottomAnchor.constraint(equalTo: healthCard.bottomAnchor, constant: -AppUIStyle.paddingM),
+        ])
+        // 当 warning 隐藏时 stack 直接连 bottom
+        stack.bottomAnchor.constraint(equalTo: healthCard.bottomAnchor, constant: -AppUIStyle.paddingM).isActive = healthWarningLabel.isHidden
+    }
+
+    private func makeHealthItem(valueLabel: UILabel, title: String, subtitle: String, color: UIColor) -> UIView {
+        let container = UIView()
+        container.translatesAutoresizingMaskIntoConstraints = false
+
+        let iconLabel = UILabel()
+        iconLabel.text = title
+        iconLabel.font = UIFont.systemFont(ofSize: 20)
+        iconLabel.textAlignment = .center
+        iconLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        valueLabel.text = "--"
+        valueLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        valueLabel.textColor = color
+        valueLabel.textAlignment = .center
+        valueLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        let subLabel = UILabel()
+        subLabel.text = subtitle
+        subLabel.font = UIFont.systemFont(ofSize: 11, weight: .regular)
+        subLabel.textColor = AppColor.textSub
+        subLabel.textAlignment = .center
+        subLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        container.addSubview(iconLabel)
+        container.addSubview(valueLabel)
+        container.addSubview(subLabel)
+
+        NSLayoutConstraint.activate([
+            iconLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 4),
+            iconLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor),
+            valueLabel.topAnchor.constraint(equalTo: iconLabel.bottomAnchor, constant: 2),
+            valueLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor),
+            subLabel.topAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: 2),
+            subLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor),
+            subLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -4),
+        ])
+        return container
     }
 
     private func setupFastingStats() {
@@ -233,7 +365,11 @@ class StatsViewController: UIViewController {
             weeklyReportCard.topAnchor.constraint(equalTo: predictionCard.bottomAnchor, constant: AppUIStyle.paddingM),
             weeklyReportCard.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: AppUIStyle.paddingM),
             weeklyReportCard.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -AppUIStyle.paddingM),
-            weeklyReportCard.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -AppUIStyle.paddingXL),
+
+            healthCard.topAnchor.constraint(equalTo: weeklyReportCard.bottomAnchor, constant: AppUIStyle.paddingM),
+            healthCard.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: AppUIStyle.paddingM),
+            healthCard.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -AppUIStyle.paddingM),
+            healthCard.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -100),
         ])
     }
 
