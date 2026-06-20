@@ -173,7 +173,9 @@ struct VisionFoodMapper {
         ("tea",             ["green_tea", "black_tea"]),
         ("green tea",       ["green_tea"]),
         ("matcha",          ["matcha"]),
-        ("juice",           ["orange_juice"]),
+        ("orange juice",    ["orange_juice"]),
+        ("apple juice",     ["apple_juice"]),
+        ("tomato juice",    ["tomato_juice"]),
         ("smoothie",        ["smoothie_green"]),
         // 快餐
         ("burger",          ["burger_beef"]),
@@ -241,9 +243,11 @@ struct VisionFoodMapper {
             "indoor", "outdoor", "nature", "sky", "background",
             "utensil", "tableware", "bowl", "plate", "cup",
             "cutlery", "fork", "knife", "spoon", "chopstick",
+            "drinking_glass", "glass", "liquid", "drink",
             "structure", "wood", "wood_processed", "furniture",
             "seasonings", "condiment", "sauce", "spice",
-            "surface", "floor", "wall", "table", "counter"
+            "surface", "floor", "wall", "table", "counter",
+            "cutting board", "chopping board"
         ]
 
         let filtered = observations.filter { obs in
