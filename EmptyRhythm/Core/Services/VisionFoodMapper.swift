@@ -134,9 +134,12 @@ struct VisionFoodMapper {
         ("omelette",        ["egg_scrambled"]),
         // 主食
         ("rice",            ["white_rice", "brown_rice"]),
-        ("noodle",          ["pasta_white"]),
-        ("pasta",           ["pasta_white"]),
-        ("spaghetti",       ["pasta_white"]),
+        ("noodle",          ["pasta_white_cooked", "noodle_rice"]),
+        ("pasta",           ["pasta_white_cooked", "pasta_bolognese", "pasta_carbonara"]),
+        ("spaghetti",       ["spaghetti_cooked", "pasta_bolognese"]),
+        ("meatball",        ["beef_mince", "lion_head"]),
+        ("bolognese",       ["pasta_bolognese"]),
+        ("carbonara",       ["pasta_carbonara"]),
         ("bread",           ["bread_whole_wheat", "bread_white"]),
         ("toast",           ["bread_white"]),
         ("oat",             ["oats_rolled"]),
@@ -237,7 +240,10 @@ struct VisionFoodMapper {
             "people", "person", "adult", "human", "face",
             "indoor", "outdoor", "nature", "sky", "background",
             "utensil", "tableware", "bowl", "plate", "cup",
-            "cutlery", "fork", "knife", "spoon", "chopstick"
+            "cutlery", "fork", "knife", "spoon", "chopstick",
+            "structure", "wood", "wood_processed", "furniture",
+            "seasonings", "condiment", "sauce", "spice",
+            "surface", "floor", "wall", "table", "counter"
         ]
 
         let filtered = observations.filter { obs in
