@@ -1,4 +1,5 @@
 import UIKit
+import CoreData
 
 // MARK: - 计时器主页面
 class TimerViewController: UIViewController {
@@ -30,6 +31,11 @@ class TimerViewController: UIViewController {
     private let statsTitle = UILabel()
     private let statsStack = UIStackView()
 
+    // 统计数字 label（需要持久引用以便更新）
+    private let streakValueLabel = UILabel()
+    private let completedValueLabel = UILabel()
+    private let weightValueLabel = UILabel()
+
     // AI 快捷入口
     private let aiQuickButton = UIButton(type: .system)
 
@@ -50,6 +56,58 @@ class TimerViewController: UIViewController {
         super.viewWillAppear(animated)
         timerManager.syncWithSystemTime()
         updateUI()
+        loadStatsData()
+    }
+
+    // MARK: - 加载统计数据
+    private func loadStatsData() {
+        let ctx = CoreDataManager.shared.context
+        let today = Calendar.current.startOfDay(for: Date())
+
+        // 1. 今日完成次数
+        let completedReq: NSFetchRequest<FastRecord> = FastRecord.fetchRequest()
+        completedReq.predicate = NSPredicate(
+            format: "startTime >= %@ AND status == 1", today as NSDate
+        )
+        let todayCompleted = (try? ctx.count(for: completedReq)) ?? 0
+        completedValueLabel.text = "\(todayCompleted)"
+
+        // 2. 连续断食天数（streak）
+        let streakDays = calculateStreak(ctx: ctx)
+        streakValueLabel.text = "\(streakDays)"
+
+        // 3. 最新体重
+        let weightReq: NSFetchRequest<WeightRecord> = WeightRecord.fetchRequest()
+        weightReq.sortDescriptors = [NSSortDescriptor(key: "recordDate", ascending: false)]
+        weightReq.fetchLimit = 1
+        if let latest = try? ctx.fetch(weightReq).first {
+            weightValueLabel.text = String(format: "%.1f", latest.weight)
+        } else {
+            weightValueLabel.text = "--"
+        }
+    }
+
+    private func calculateStreak(ctx: NSManagedObjectContext) -> Int {
+        let req: NSFetchRequest<FastRecord> = FastRecord.fetchRequest()
+        req.predicate = NSPredicate(format: "status == 1")
+        req.sortDescriptors = [NSSortDescriptor(key: "startTime", ascending: false)]
+        guard let records = try? ctx.fetch(req), !records.isEmpty else { return 0 }
+
+        var streak = 0
+        var checkDate = Calendar.current.startOfDay(for: Date())
+        let cal = Calendar.current
+
+        for record in records {
+            guard let startTime = record.startTime else { continue }
+            let recordDay = cal.startOfDay(for: startTime)
+            if recordDay == checkDate {
+                streak += 1
+                checkDate = cal.date(byAdding: .day, value: -1, to: checkDate)!
+            } else if recordDay < checkDate {
+                break
+            }
+        }
+        return streak
     }
 
     // MARK: - UI 搭建
@@ -155,9 +213,10 @@ class TimerViewController: UIViewController {
         statsStack.spacing = 8
         statsStack.translatesAutoresizingMaskIntoConstraints = false
 
-        let streakItem = makeStatItem(value: "0", label: L("stats.streak"))
-        let completedItem = makeStatItem(value: "0", label: L("stats.completed"))
-        let weightItem = makeStatItem(value: "--", label: L("stats.weight"))
+        // 使用持久引用构建统计 item
+        let streakItem = makeStatItem(valueLabel: streakValueLabel, label: L("stats.streak"), color: AppColor.mainTint)
+        let completedItem = makeStatItem(valueLabel: completedValueLabel, label: L("stats.completed"), color: AppColor.aiBlue)
+        let weightItem = makeStatItem(valueLabel: weightValueLabel, label: L("stats.weight"), color: AppColor.warningOrange)
         statsStack.addArrangedSubview(streakItem)
         statsStack.addArrangedSubview(completedItem)
         statsStack.addArrangedSubview(weightItem)
@@ -167,14 +226,13 @@ class TimerViewController: UIViewController {
         contentView.addSubview(statsCard)
     }
 
-    private func makeStatItem(value: String, label: String) -> UIView {
+    private func makeStatItem(valueLabel: UILabel, label: String, color: UIColor) -> UIView {
         let container = UIView()
         container.translatesAutoresizingMaskIntoConstraints = false
 
-        let valueLabel = UILabel()
-        valueLabel.text = value
+        valueLabel.text = "--"
         valueLabel.font = UIFont.systemFont(ofSize: 22, weight: .bold)
-        valueLabel.textColor = AppColor.mainTint
+        valueLabel.textColor = color
         valueLabel.textAlignment = .center
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
 
