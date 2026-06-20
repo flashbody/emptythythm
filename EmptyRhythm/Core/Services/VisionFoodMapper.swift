@@ -127,7 +127,6 @@ struct VisionFoodMapper {
         ("clam",            ["clam"]),
         ("scallop",         ["scallop"]),
         ("fish",            ["cod", "salmon"]),
-        // 蛋类
         ("egg",             ["egg_boiled", "egg_fried"]),
         ("omelette",        ["egg_scrambled"]),
         // 主食
@@ -219,11 +218,25 @@ struct VisionFoodMapper {
         return results
     }
 
-    // MARK: - 批量匹配
+    // MARK: - 批量匹配（按置信度排序，具体标签优先）
     static func matchMultiple(observations: [(label: String, confidence: Float)]) -> [FoodItem] {
+        // 过滤掉泛类标签（太宽泛会误导）
+        let genericLabels = ["food", "fruit", "vegetable", "produce", "plant",
+                             "natural object", "organism", "dish", "meal",
+                             "ingredient", "cuisine", "snack", "drink", "beverage",
+                             "document", "screenshot", "chart", "diagram", "text",
+                             "paper", "image", "photo", "picture"]
+
+        let filtered = observations.filter { obs in
+            obs.confidence > 0.05 &&
+            !genericLabels.contains(where: { obs.label.lowercased().contains($0) })
+        }
+
+        // 按置信度降序，优先处理高置信度的具体标签
+        let sorted = filtered.sorted { $0.confidence > $1.confidence }
+
         var results: [FoodItem] = []
-        for obs in observations {
-            guard obs.confidence > 0.05 else { continue }
+        for obs in sorted {
             for m in match(label: obs.label, confidence: obs.confidence) {
                 if !results.contains(where: { $0.id == m.id }) { results.append(m) }
             }
