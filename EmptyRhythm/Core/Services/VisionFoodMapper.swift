@@ -184,9 +184,12 @@ struct VisionFoodMapper {
         ("pad thai",        ["pad_thai"]),
         // 甜点
         ("cake",            ["cake_chocolate"]),
+        ("cheesecake",      ["cake_cheesecake"]),
+        ("baked goods",     ["croissant", "bread_white"]),
+        ("baked_goods",     ["croissant", "bread_white"]),
         ("cookie",          ["cookie_chocolate_chip"]),
         ("chocolate",       ["chocolate_dark"]),
-        ("donut",           ["donut"]),
+        ("dessert",         ["cake_chocolate", "ice_cream_vanilla"]),
         ("croissant",       ["croissant"]),
         ("waffle",          ["waffle"]),
         ("pancake",         ["pancake"]),
@@ -221,18 +224,22 @@ struct VisionFoodMapper {
     // MARK: - 批量匹配（按置信度排序，具体标签优先）
     static func matchMultiple(observations: [(label: String, confidence: Float)]) -> [FoodItem] {
         // 过滤掉泛类标签（太宽泛会误导）
-        let genericLabels = ["food", "fruit", "vegetable", "produce", "plant",
-                             "natural object", "organism", "dish", "meal",
-                             "ingredient", "cuisine", "snack", "drink", "beverage",
-                             "berry", "citrus", "tropical fruit", "stone fruit",
-                             "document", "screenshot", "chart", "diagram", "text",
-                             "paper", "image", "photo", "picture",
-                             "people", "person", "adult", "human", "face",
-                             "indoor", "outdoor", "nature", "sky", "background"]
+        let genericLabels: Set<String> = [
+            "food", "fruit", "vegetable", "produce", "plant",
+            "natural object", "organism", "dish", "meal",
+            "ingredient", "cuisine", "snack", "drink", "beverage",
+            "berry", "citrus", "tropical fruit", "stone fruit",
+            "document", "screenshot", "chart", "diagram", "text",
+            "paper", "image", "photo", "picture",
+            "people", "person", "adult", "human", "face",
+            "indoor", "outdoor", "nature", "sky", "background"
+        ]
 
         let filtered = observations.filter { obs in
-            obs.confidence > 0.05 &&
-            !genericLabels.contains(where: { obs.label.lowercased().contains($0) })
+            let lower = obs.label.lowercased()
+            guard obs.confidence > 0.05 else { return false }
+            // 精确匹配泛类标签（不用 contains，避免 raspberry 被 berry 误杀）
+            return !genericLabels.contains(lower)
         }
 
         // 按置信度降序，优先处理高置信度的具体标签
