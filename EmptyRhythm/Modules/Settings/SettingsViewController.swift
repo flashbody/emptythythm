@@ -8,7 +8,7 @@ class SettingsViewController: UIViewController {
 
     // MARK: - Section / Row 枚举
     private enum Section: Int, CaseIterable {
-        case profile, notifications, ai, appearance, privacy, iap, about
+        case profile, notifications, ai, appearance, privacy, about
         var title: String {
             switch self {
             case .profile:       return L("settings.section.profile")
@@ -16,7 +16,6 @@ class SettingsViewController: UIViewController {
             case .ai:            return L("settings.section.ai")
             case .appearance:    return L("settings.section.appearance")
             case .privacy:       return L("settings.section.privacy")
-            case .iap:           return L("settings.section.iap")
             case .about:         return L("settings.section.about")
             }
         }
@@ -33,8 +32,6 @@ class SettingsViewController: UIViewController {
         case appearanceMode, language
         // Privacy
         case clearLocalData, clearCloudData
-        // IAP
-        case upgradePro, restorePurchase
         // About
         case version, privacyPolicy, termsOfService, rateApp, contactUs
     }
@@ -45,12 +42,10 @@ class SettingsViewController: UIViewController {
         [.aiEnabled, .aiWeeklyReport, .clearAIHistory],
         [.appearanceMode, .language],
         [.clearLocalData, .clearCloudData],
-        [.upgradePro, .restorePurchase],
         [.version, .privacyPolicy, .termsOfService, .rateApp, .contactUs],
     ]
 
     private let tableView = UITableView(frame: .zero, style: .insetGrouped)
-    private var isProcessingIAP = false   // 防止 IAP 重复点击
 
     // MARK: - UserDefaults Keys
     private let kNotifyFastStart    = "er_notify_fast_start"
@@ -137,13 +132,6 @@ class SettingsViewController: UIViewController {
         case .clearCloudData:
             return actionCell(title: L("settings.privacy.clear_cloud"),
                               color: AppColor.danger, icon: "icloud.slash")
-        case .upgradePro:
-            if IAPManager.shared.isProUnlocked {
-                return infoCell(title: L("settings.iap.pro_unlocked"), icon: "checkmark.seal.fill", color: AppColor.mainTint)
-            }
-            return actionCell(title: L("settings.iap.upgrade"), color: AppColor.mainTint, icon: "star.fill")
-        case .restorePurchase:
-            return disclosureCell(title: L("settings.iap.restore"), subtitle: nil, icon: "arrow.clockwise")
         case .version:
             let v = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
             let b = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"
@@ -264,35 +252,6 @@ class SettingsViewController: UIViewController {
                           message: L("settings.privacy.clear_cloud.confirm"),
                           isDestructive: true) {
                 self.clearCloudData()
-            }
-
-        case .upgradePro:
-            guard !IAPManager.shared.isProUnlocked, !isProcessingIAP else { return }
-            isProcessingIAP = true
-            Task { @MainActor in
-                defer { self.isProcessingIAP = false }
-                do {
-                    try await IAPManager.shared.purchase()
-                    self.tableView.reloadData()
-                    self.showAlert(title: L("settings.iap.success"), message: L("settings.iap.success.msg"))
-                } catch {
-                    if case IAPError.userCancelled = error { return }
-                    self.showAlert(title: L("common.error"), message: error.localizedDescription)
-                }
-            }
-
-        case .restorePurchase:
-            guard !isProcessingIAP else { return }
-            isProcessingIAP = true
-            Task { @MainActor in
-                defer { self.isProcessingIAP = false }
-                do {
-                    try await IAPManager.shared.restore()
-                    self.tableView.reloadData()
-                    self.showAlert(title: L("settings.iap.restored"), message: L("settings.iap.restored.msg"))
-                } catch {
-                    self.showAlert(title: L("common.error"), message: error.localizedDescription)
-                }
             }
 
         case .privacyPolicy:
