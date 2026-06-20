@@ -203,33 +203,28 @@ class FoodCameraViewController: UIViewController {
                 guard let self = self else { return }
                 let observations = (request.results as? [VNClassificationObservation]) ?? []
 
-                // 只取置信度 > 0.1 的标签，避免低置信度误导
-                let topObs = observations.filter { $0.confidence > 0.1 }.prefix(8)
+                // 调试：打印 Vision 返回的原始标签
+                #if DEBUG
+                let top10 = observations.prefix(10)
+                print("[Vision Raw Labels]:")
+                for o in top10 {
+                    print(String(format: "  %.3f  %@", o.confidence, o.identifier))
+                }
+                #endif
 
-                var candidates: [FoodItem] = []
-                var matchedLabels: [String] = []
-
-                for obs in topObs {
-                    let label = obs.identifier.lowercased()
-                    let matches = VisionFoodMapper.match(label: label, confidence: obs.confidence)
-                    for m in matches {
-                        if !candidates.contains(where: { $0.id == m.id }) {
-                            candidates.append(m)
-                            matchedLabels.append("\(label)(\(String(format: "%.0f", obs.confidence * 100))%)")
-                        }
-                    }
-                    if candidates.count >= 3 { break }
+                // 转换为 (label, confidence) 数组
+                let obsArray = observations.prefix(15).map {
+                    (label: $0.identifier, confidence: $0.confidence)
                 }
 
-                // 去重，最多 3 个候选（更聚焦）
-                candidates = Array(candidates.prefix(3))
+                // 批量匹配
+                let candidates = VisionFoodMapper.matchMultiple(observations: Array(obsArray))
 
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
                     self.analyzeButton.isEnabled = true
 
                     if candidates.isEmpty {
-                        // 识别失败：自动跳转搜索，不给错误答案
                         self.showSearchFallback()
                     } else {
                         self.candidates = candidates
