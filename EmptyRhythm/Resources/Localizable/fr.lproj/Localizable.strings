@@ -279,3 +279,9 @@
 
 /* Launch Screen */
 "launch.tagline" = "Jeûne rythmé · Rencontre un meilleur toi";
+
+/* Camera - No Match */
+"camera.no_match.title" = "Reconnaissance echouee";
+"camera.no_match.message" = "Impossible d identifier l aliment. Rechercher manuellement?";
+"camera.no_match.search" = "Rechercher";
+"camera.no_match.retry" = "Reessayer";

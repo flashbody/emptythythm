@@ -282,3 +282,9 @@
 
 /* Launch Screen */
 "launch.tagline" = "Rhythm of fasting · Meet a better you";
+
+/* Camera - No Match */
+"camera.no_match.title" = "Recognition Failed";
+"camera.no_match.message" = "Could not identify the food. Search manually?";
+"camera.no_match.search" = "Search Food";
+"camera.no_match.retry" = "Try Again";

@@ -13,6 +13,7 @@
 		0FC472501CECEF44539382E5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F13F65D7537F229B971497 /* CoreDataManager.swift */; };
 		18943F1F243772450623D029 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5457C0B5BE44C8CD61563F /* AuthenticationServices.framework */; };
 		1E7DD2DFDCB25110345A018D /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6866A01FC45F41473A9706ED /* StatsViewController.swift */; };
+		1F6E461171369479EB71F995 /* VisionFoodMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC430BC973CBE00FC01CCC98 /* VisionFoodMapper.swift */; };
 		22948B1EAAC7D0F8C463042C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A00D02D4C20D0B66A68AA8 /* CoreData.framework */; };
 		24063DEBED951DF1B6EEAFF6 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB920C59BD398B809695C33 /* AppColor.swift */; };
 		25C236C5803290F09A8E9D0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D85F02C3776ACCBFAA3CF /* SceneDelegate.swift */; };
@@ -83,7 +84,7 @@
 		32143A26DC4D3E1CF3931A02 /* FoodCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCameraViewController.swift; sourceTree = "<group>"; };
 		32217A80AE9F34E3E3015DAA /* EmptyRhythmTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = EmptyRhythmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		329316FCF5A4D115867FCFBA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		37F0EB276F9E913C60D4E5AB /* EmptyRhythmWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmptyRhythmWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F0EB276F9E913C60D4E5AB /* EmptyRhythmWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = EmptyRhythmWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4624E8C91A3C25366137637C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		465AB0BF63E16BFEF21CC9B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5194A737C7AF9AE29AA1CD41 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 		A53C226AA4E1A9F1B2A68123 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
 		A7A73F086545EBEF3865DD86 /* AIAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAssistantViewController.swift; sourceTree = "<group>"; };
 		AB51F86F54D93FE940C00722 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		AC430BC973CBE00FC01CCC98 /* VisionFoodMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionFoodMapper.swift; sourceTree = "<group>"; };
 		BACB67866685728A1BF8A6B2 /* EmptyRhythm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmptyRhythm.entitlements; sourceTree = "<group>"; };
 		BB26D0AA756A1BAA5B1FAF9D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C49B5FA628A1877179EB3453 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +117,7 @@
 		E6C8FE77948D3201D8EB08AF /* FastPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastPlanModel.swift; sourceTree = "<group>"; };
 		E81D85F02C3776ACCBFAA3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E9D5CE974681115EA94C922A /* AppUIStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIStyle.swift; sourceTree = "<group>"; };
-		EB4DBA6A63BB73BFFD607492 /* EmptyRhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmptyRhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4DBA6A63BB73BFFD607492 /* EmptyRhythm.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = EmptyRhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB920C59BD398B809695C33 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		F068555247545C6634C77D0B /* EmptyRhythmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRhythmTests.swift; sourceTree = "<group>"; };
 		F27913DA6174C2477557FDF7 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				52E99F8BE86FCF06023AD315 /* FastTimerManager.swift */,
 				F27913DA6174C2477557FDF7 /* HealthKitService.swift */,
 				A53C226AA4E1A9F1B2A68123 /* UserProfileService.swift */,
+				AC430BC973CBE00FC01CCC98 /* VisionFoodMapper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					3B5657557300C03DD0EA7E4B = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 					87367FC76503236DDF5A3A8C = {
@@ -428,6 +432,7 @@
 						ProvisioningStyle = Automatic;
 					};
 					D88B526B6D8A6A02501A4AF9 = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -504,6 +509,7 @@
 				35214CC4023CF6B91B34BDA3 /* TimerViewController.swift in Sources */,
 				D2775F108D259235E5B290DD /* UserProfileModel.swift in Sources */,
 				EAA3DBEFBA2D26FEDEC9F691 /* UserProfileService.swift in Sources */,
+				1F6E461171369479EB71F995 /* VisionFoodMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,7 +723,6 @@
 		6514EB0F365D2B55A9B6C9E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -736,7 +741,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EmptyRhythm/App/EmptyRhythm.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -767,7 +771,6 @@
 		ED4009E6506D8D3976BF129B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -786,7 +789,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EmptyRhythm/App/EmptyRhythm.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = S8V35YCAD7;
 				INFOPLIST_FILE = EmptyRhythm/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

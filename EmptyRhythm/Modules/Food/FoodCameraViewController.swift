@@ -202,36 +202,63 @@ class FoodCameraViewController: UIViewController {
             let request = VNClassifyImageRequest { [weak self] request, _ in
                 guard let self = self else { return }
                 let observations = (request.results as? [VNClassificationObservation]) ?? []
-                let topLabels = observations.prefix(5).map { $0.identifier }
+
+                // 只取置信度 > 0.1 的标签，避免低置信度误导
+                let topObs = observations.filter { $0.confidence > 0.1 }.prefix(8)
 
                 var candidates: [FoodItem] = []
-                for label in topLabels {
-                    let matches = FoodDatabaseService.shared.matchByVisionLabel(label, confidence: 0.5)
-                    candidates.append(contentsOf: matches)
-                    if candidates.count >= 5 { break }
-                }
-                // Deduplicate
-                var seen = Set<String>()
-                candidates = candidates.filter { seen.insert($0.id).inserted }
-                candidates = Array(candidates.prefix(5))
+                var matchedLabels: [String] = []
 
-                // Fallback if no matches
-                if candidates.isEmpty {
-                    candidates = Array(FoodDatabaseService.shared.allFoods.prefix(5))
+                for obs in topObs {
+                    let label = obs.identifier.lowercased()
+                    let matches = VisionFoodMapper.match(label: label, confidence: obs.confidence)
+                    for m in matches {
+                        if !candidates.contains(where: { $0.id == m.id }) {
+                            candidates.append(m)
+                            matchedLabels.append("\(label)(\(String(format: "%.0f", obs.confidence * 100))%)")
+                        }
+                    }
+                    if candidates.count >= 3 { break }
                 }
+
+                // 去重，最多 3 个候选（更聚焦）
+                candidates = Array(candidates.prefix(3))
 
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
                     self.analyzeButton.isEnabled = true
-                    self.candidates = candidates
-                    self.resultCard.isHidden = false
-                    self.candidateTable.reloadData()
+
+                    if candidates.isEmpty {
+                        // 识别失败：自动跳转搜索，不给错误答案
+                        self.showSearchFallback()
+                    } else {
+                        self.candidates = candidates
+                        self.resultCard.isHidden = false
+                        self.candidateTable.reloadData()
+                    }
                 }
             }
 
             let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
             try? handler.perform([request])
         }
+    }
+
+    // MARK: - 识别失败降级：跳转搜索
+    private func showSearchFallback() {
+        let alert = UIAlertController(
+            title: L("camera.no_match.title"),
+            message: L("camera.no_match.message"),
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: L("camera.no_match.search"), style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            let searchVC = FoodSearchViewController()
+            searchVC.onFoodSelected = self.onFoodSelected
+            self.navigationController?.pushViewController(searchVC, animated: true)
+        })
+        alert.addAction(UIAlertAction(title: L("camera.no_match.retry"), style: .cancel))
+        present(alert, animated: true)
     }
 
     @objc private func dismiss_() { dismiss(animated: true) }

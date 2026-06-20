@@ -279,3 +279,9 @@
 
 /* Launch Screen */
 "launch.tagline" = "Fasten im Rhythmus · Werde besser";
+
+/* Camera - No Match */
+"camera.no_match.title" = "Erkennung fehlgeschlagen";
+"camera.no_match.message" = "Lebensmittel konnte nicht erkannt werden. Manuell suchen?";
+"camera.no_match.search" = "Lebensmittel suchen";
+"camera.no_match.retry" = "Erneut versuchen";

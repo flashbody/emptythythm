@@ -279,3 +279,9 @@
 
 /* Launch Screen */
 "launch.tagline" = "规律轻断食 · 遇见更好的自己";
+
+/* Camera - No Match */
+"camera.no_match.title" = "识别失败";
+"camera.no_match.message" = "未能识别食物，是否手动搜索？";
+"camera.no_match.search" = "搜索食物";
+"camera.no_match.retry" = "重试";
