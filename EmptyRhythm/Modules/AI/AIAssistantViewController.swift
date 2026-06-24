@@ -39,10 +39,10 @@ class AIAssistantViewController: UIViewController {
 
     // MARK: - Setup
     private func setupUI() {
-        // Disclaimer banner
+        // Disclaimer banner（Guideline 1.4.1 合规）
         disclaimerBanner.text = L("ai.disclaimer")
-        disclaimerBanner.font = UIFont.systemFont(ofSize: 11)
-        disclaimerBanner.textColor = AppColor.textSub
+        disclaimerBanner.font = UIFont.systemFont(ofSize: 11, weight: .medium)
+        disclaimerBanner.textColor = AppColor.warningOrange
         disclaimerBanner.textAlignment = .center
         disclaimerBanner.numberOfLines = 2
         disclaimerBanner.backgroundColor = AppColor.bgSecondary
@@ -233,42 +233,40 @@ class AIAssistantViewController: UIViewController {
         let profile = UserProfileService.shared.currentProfile
 
         // Rule-based response engine (Foundation Models integration point)
+        let response: String
         if q.contains("断食") && q.contains("喝") || q.contains("can i drink") || q.contains("trinken") {
-            return L("ai.response.drinks")
-        }
-        if q.contains("头晕") || q.contains("dizzy") || q.contains("schwindel") {
-            return L("ai.response.dizzy")
-        }
-        if q.contains("饥饿") || q.contains("hungry") || q.contains("hunger") {
-            return L("ai.response.hunger")
-        }
-        if q.contains("方案") || q.contains("plan") || q.contains("plan") {
+            response = L("ai.response.drinks")
+        } else if q.contains("头晕") || q.contains("dizzy") || q.contains("schwindel") {
+            response = L("ai.response.dizzy")
+        } else if q.contains("饥饿") || q.contains("hungry") || q.contains("hunger") {
+            response = L("ai.response.hunger")
+        } else if q.contains("方案") || q.contains("plan") {
             if let p = profile {
                 let plan = AIFastPlanEngine.shared.ruleBasedRecommendation(for: p)
-                return String(format: L("ai.response.plan"), plan.name, plan.fastHour, plan.eatHour)
+                response = String(format: L("ai.response.plan"), plan.name, plan.fastHour, plan.eatHour)
+            } else {
+                response = L("ai.response.plan_no_profile")
             }
-            return L("ai.response.plan_no_profile")
-        }
-        if q.contains("卡路里") || q.contains("calorie") || q.contains("kalorien") {
+        } else if q.contains("卡路里") || q.contains("calorie") || q.contains("kalorien") {
             if let p = profile {
-                return String(format: L("ai.response.calorie"), Int(p.dailyTargetCalorie), Int(p.calorieDeficit))
+                response = String(format: L("ai.response.calorie"), Int(p.dailyTargetCalorie), Int(p.calorieDeficit))
+            } else {
+                response = L("ai.response.calorie_no_profile")
             }
-            return L("ai.response.calorie_no_profile")
-        }
-        if q.contains("体重") || q.contains("weight") || q.contains("gewicht") {
-            return L("ai.response.weight")
-        }
-        if q.contains("运动") || q.contains("exercise") || q.contains("sport") {
-            return L("ai.response.exercise")
-        }
-        if q.contains("经期") || q.contains("period") || q.contains("menstruation") {
-            return L("ai.response.period")
-        }
-        if q.contains("新手") || q.contains("beginner") || q.contains("anfänger") {
-            return L("ai.response.beginner")
+        } else if q.contains("体重") || q.contains("weight") || q.contains("gewicht") {
+            response = L("ai.response.weight")
+        } else if q.contains("运动") || q.contains("exercise") || q.contains("sport") {
+            response = L("ai.response.exercise")
+        } else if q.contains("经期") || q.contains("period") || q.contains("menstruation") {
+            response = L("ai.response.period")
+        } else if q.contains("新手") || q.contains("beginner") || q.contains("anfänger") {
+            response = L("ai.response.beginner")
+        } else {
+            response = L("ai.response.default")
         }
 
-        return L("ai.response.default")
+        // 附加信息来源引用（Guideline 1.4.1 合规）
+        return response + "\n\n" + L("ai.citation")
     }
 
     private func saveToHistory(user: String, ai: String) {
