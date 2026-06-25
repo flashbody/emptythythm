@@ -285,7 +285,7 @@ extension FoodCameraViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let food = candidates[indexPath.row]
         let alert = UIAlertController(title: food.localizedName, message: L("food.enter_weight"), preferredStyle: .alert)
-        alert.addTextField { tf in tf.placeholder = "100"; tf.keyboardType = .numberPad; tf.text = "100" }
+        alert.addTextField { tf in tf.placeholder = L("food.weight.placeholder"); tf.keyboardType = .numberPad; tf.text = "100" }
         alert.addAction(UIAlertAction(title: L("common.cancel"), style: .cancel))
         alert.addAction(UIAlertAction(title: L("common.add"), style: .default) { [weak self] _ in
             guard let self = self else { return }

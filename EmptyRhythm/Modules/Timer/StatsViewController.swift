@@ -483,7 +483,7 @@ class StatsViewController: UIViewController {
             preferredStyle: .alert
         )
         alert.addTextField { tf in
-            tf.placeholder = "kg"
+            tf.placeholder = "kg"  // 单位符号，无需本地化
             tf.keyboardType = .decimalPad
             if let latest = self.weightRecords.last {
                 tf.text = String(format: "%.1f", latest.weight)

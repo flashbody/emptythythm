@@ -289,3 +289,4 @@
 /* AI Citation - Guideline 1.4.1 */
 "ai.citation" = "📚 Sources : Harvard T.H. Chan School of Public Health (hsph.harvard.edu) · New England Journal of Medicine (NEJM, 2019) · Mayo Clinic (mayoclinic.org) · Directives nutritionnelles de l'OMS. Ces informations sont uniquement à titre informatif et ne constituent pas un avis médical. Consultez votre médecin avant de commencer tout programme de jeûne.";
 "ai.disclaimer" = "Le contenu IA est indicatif uniquement, pas un avis médical. Consultez votre médecin pour des problèmes de santé.";
+"food.weight.placeholder" = "100";

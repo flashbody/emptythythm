@@ -436,6 +436,12 @@ class TimerViewController: UIViewController {
             self?.loadStatsData()
         })
         alert.addAction(UIAlertAction(title: L("common.cancel"), style: .cancel))
+        // iPad 需要设置 popoverPresentationController，否则崩溃
+        if let popover = alert.popoverPresentationController {
+            popover.sourceView = stopButton
+            popover.sourceRect = stopButton.bounds
+            popover.permittedArrowDirections = .any
+        }
         present(alert, animated: true)
     }
 

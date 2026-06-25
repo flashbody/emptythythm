@@ -292,3 +292,4 @@
 /* AI Citation - Guideline 1.4.1 */
 "ai.citation" = "📚 Sources: Harvard T.H. Chan School of Public Health (hsph.harvard.edu) · New England Journal of Medicine (NEJM, 2019) · Mayo Clinic (mayoclinic.org) · WHO Nutrition Guidelines. This information is for general wellness only and does not constitute medical advice. Consult your doctor before starting any fasting program.";
 "ai.disclaimer" = "AI content is for reference only. Not medical advice. Consult your doctor for health concerns.";
+"food.weight.placeholder" = "100";

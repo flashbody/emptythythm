@@ -318,6 +318,12 @@ class SettingsViewController: UIViewController {
             alert.addAction(action)
         }
         alert.addAction(UIAlertAction(title: L("common.cancel"), style: .cancel))
+        // iPad popover 修复
+        if let popover = alert.popoverPresentationController {
+            popover.sourceView = tableView
+            popover.sourceRect = CGRect(x: tableView.bounds.midX, y: tableView.bounds.midY, width: 0, height: 0)
+            popover.permittedArrowDirections = []
+        }
         present(alert, animated: true)
     }
 

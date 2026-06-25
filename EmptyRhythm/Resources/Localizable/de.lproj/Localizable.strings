@@ -289,3 +289,4 @@
 /* AI Citation - Guideline 1.4.1 */
 "ai.citation" = "📚 Quellen: Harvard T.H. Chan School of Public Health (hsph.harvard.edu) · New England Journal of Medicine (NEJM, 2019) · Mayo Clinic (mayoclinic.org) · WHO-Ernährungsrichtlinien. Diese Informationen dienen nur allgemeinen Gesundheitszwecken und stellen keine medizinische Beratung dar. Konsultieren Sie Ihren Arzt, bevor Sie mit dem Fasten beginnen.";
 "ai.disclaimer" = "KI-Inhalte dienen nur als Referenz, keine medizinische Beratung. Bei gesundheitlichen Fragen wenden Sie sich an einen Arzt.";
+"food.weight.placeholder" = "100";

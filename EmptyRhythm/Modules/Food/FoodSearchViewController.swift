@@ -176,7 +176,7 @@ extension FoodSearchViewController: UITableViewDelegate, UITableViewDataSource {
             preferredStyle: .alert
         )
         alert.addTextField { tf in
-            tf.placeholder = "100"
+            tf.placeholder = L("food.weight.placeholder")
             tf.keyboardType = .numberPad
             tf.text = "100"
         }
