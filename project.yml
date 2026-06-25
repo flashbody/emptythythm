@@ -60,10 +60,10 @@ targets:
             UIWindowSceneSessionRoleApplication:
               - UISceneConfigurationName: Default Configuration
                 UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
-        NSHealthShareUsageDescription: "空律需要读取您的运动和健康数据，以提供个性化的断食方案和运动预警。"
-        NSHealthUpdateUsageDescription: "空律需要写入断食记录到健康App，方便您统一查看健康数据。"
-        NSCameraUsageDescription: "空律需要访问相机，用于拍照识别食物热量。"
-        NSPhotoLibraryUsageDescription: "空律需要访问相册，用于从图片识别食物热量。"
+        NSHealthShareUsageDescription: "$(NSHealthShareUsageDescription)"
+        NSHealthUpdateUsageDescription: "$(NSHealthUpdateUsageDescription)"
+        NSCameraUsageDescription: "$(NSCameraUsageDescription)"
+        NSPhotoLibraryUsageDescription: "$(NSPhotoLibraryUsageDescription)"
         UIBackgroundModes:
           - fetch
           - remote-notification

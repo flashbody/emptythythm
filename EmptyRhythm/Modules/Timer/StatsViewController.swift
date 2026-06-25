@@ -192,9 +192,9 @@ class StatsViewController: UIViewController {
         stack.distribution = .fillEqually
         stack.translatesAutoresizingMaskIntoConstraints = false
 
-        let stepsItem  = makeHealthItem(valueLabel: stepsValueLabel,     title: "👟", subtitle: "步数",   color: AppColor.mainTint)
-        let calItem    = makeHealthItem(valueLabel: calorieValueLabel,    title: "🔥", subtitle: "千卡",   color: AppColor.warningOrange)
-        let heartItem  = makeHealthItem(valueLabel: heartRateValueLabel,  title: "❤️", subtitle: "心率",   color: .systemRed)
+        let stepsItem  = makeHealthItem(valueLabel: stepsValueLabel,     title: "👟", subtitle: L("health.steps"),    color: AppColor.mainTint)
+        let calItem    = makeHealthItem(valueLabel: calorieValueLabel,    title: "🔥", subtitle: L("health.calories"), color: AppColor.warningOrange)
+        let heartItem  = makeHealthItem(valueLabel: heartRateValueLabel,  title: "❤️", subtitle: L("health.heart"),    color: .systemRed)
 
         stack.addArrangedSubview(stepsItem)
         stack.addArrangedSubview(calItem)

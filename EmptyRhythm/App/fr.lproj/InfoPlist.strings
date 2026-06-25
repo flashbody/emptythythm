@@ -1,2 +1,6 @@
 CFBundleDisplayName = "EmptyRhythm";
 CFBundleName = "EmptyRhythm";
+NSHealthShareUsageDescription = "EmptyRhythm a besoin d'accéder à vos données d'activité et de santé pour fournir des plans de jeûne personnalisés et des alertes d'activité.";
+NSHealthUpdateUsageDescription = "EmptyRhythm doit écrire les enregistrements de jeûne dans l'app Santé pour un suivi unifié.";
+NSCameraUsageDescription = "EmptyRhythm a besoin d'accéder à la caméra pour reconnaître les aliments et estimer les calories.";
+NSPhotoLibraryUsageDescription = "EmptyRhythm a besoin d'accéder à la photothèque pour reconnaître les aliments dans les images.";

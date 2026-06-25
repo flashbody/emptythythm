@@ -28,13 +28,13 @@
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSCameraUsageDescription</key>
-	<string>空律需要访问相机，用于拍照识别食物热量。</string>
+	<string>$(NSCameraUsageDescription)</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>空律需要读取您的运动和健康数据，以提供个性化的断食方案和运动预警。</string>
+	<string>$(NSHealthShareUsageDescription)</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>空律需要写入断食记录到健康App，方便您统一查看健康数据。</string>
+	<string>$(NSHealthUpdateUsageDescription)</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>空律需要访问相册，用于从图片识别食物热量。</string>
+	<string>$(NSPhotoLibraryUsageDescription)</string>
 	<key>NSUbiquitousContainers</key>
 	<dict>
 		<key>iCloud.com.emptythythm.app</key>
