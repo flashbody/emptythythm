@@ -28,13 +28,13 @@
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSCameraUsageDescription</key>
-	<string>$(NSCameraUsageDescription)</string>
+	<string>EmptyRhythm needs camera access to recognize food and estimate calories.</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>$(NSHealthShareUsageDescription)</string>
+	<string>EmptyRhythm needs to read your activity and health data to provide personalized fasting plans and activity alerts.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>$(NSHealthUpdateUsageDescription)</string>
+	<string>EmptyRhythm needs to write fasting records to Health app for unified health tracking.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(NSPhotoLibraryUsageDescription)</string>
+	<string>EmptyRhythm needs photo library access to recognize food from images.</string>
 	<key>NSUbiquitousContainers</key>
 	<dict>
 		<key>iCloud.com.emptythythm.app</key>

@@ -60,10 +60,10 @@ targets:
             UIWindowSceneSessionRoleApplication:
               - UISceneConfigurationName: Default Configuration
                 UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
-        NSHealthShareUsageDescription: "$(NSHealthShareUsageDescription)"
-        NSHealthUpdateUsageDescription: "$(NSHealthUpdateUsageDescription)"
-        NSCameraUsageDescription: "$(NSCameraUsageDescription)"
-        NSPhotoLibraryUsageDescription: "$(NSPhotoLibraryUsageDescription)"
+        NSHealthShareUsageDescription: "EmptyRhythm needs to read your activity and health data to provide personalized fasting plans and activity alerts."
+        NSHealthUpdateUsageDescription: "EmptyRhythm needs to write fasting records to Health app for unified health tracking."
+        NSCameraUsageDescription: "EmptyRhythm needs camera access to recognize food and estimate calories."
+        NSPhotoLibraryUsageDescription: "EmptyRhythm needs photo library access to recognize food from images."
         UIBackgroundModes:
           - fetch
           - remote-notification
